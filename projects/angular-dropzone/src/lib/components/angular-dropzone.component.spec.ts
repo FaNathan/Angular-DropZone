@@ -45,7 +45,7 @@ describe('AngularDropzoneComponent', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(AngularDropzoneComponent);
     component = fixture.componentInstance;
-    component.uploadAPI = new AngularDropzoneAPI('localhost', 'POST', {} as any);
+    component.uploadAPI = new AngularDropzoneAPI('localhost', 'POST');
     window.HTMLElement.prototype.scrollIntoView = () => { };
     dumpFiles = dumpFiles_6;
     fixture.detectChanges();
