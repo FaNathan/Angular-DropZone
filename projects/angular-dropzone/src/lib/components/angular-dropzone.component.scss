@@ -1,0 +1,230 @@
+$background-color: #e4e6ea;
+$row-background: #bbbfc4;
+$border-color: #1b4480;
+$error-color: #e10032;
+$main-text-color: #464646;
+$secondary-text-color: #73777a;
+$action-colour: #2f94fd;
+:host {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  .dropzone-container {
+    color: $secondary-text-color;
+    display: grid;
+    background-color: $background-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-out;
+    height: 100%;
+    .drag-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: $background-color;
+      min-height: 100px;
+      font-size: 18px;
+      padding: 10px;
+      .main-message {
+        margin-bottom: 10px;
+        text-align: center;
+        .browse-link {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    .status-bar {
+      width: 100%;
+      box-sizing: border-box;
+      gap: 10px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+      justify-content: end;
+      .action-button {
+        width: 100px;
+        height: 35px;
+        border: 2px solid $action-colour;
+        color: $action-colour;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        &:hover {
+          background-color: $action-colour;
+          color: $background-color;
+          &.reset {
+            background-color: $secondary-text-color;
+            color: $background-color;
+          }
+        }
+        &.reset {
+          border: 2px solid $secondary-text-color;
+          color: $secondary-text-color;
+        }
+      }
+    }
+    .files-table {
+      margin: 10px;
+      overflow: auto;
+      .file-row {
+        background-color: $row-background;
+        border-radius: 5px;
+        font-size: 14px;
+        display: grid;
+        overflow: hidden;
+        min-height: 50px;
+        grid-template-rows: minmax(50px, 1fr) minmax(0, auto) auto;
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        animation: 0.1s ease-out 1 slideInFromBottom;
+        .main-row {
+          display: grid;
+          grid-template-columns: auto 1fr auto auto auto auto;
+          align-items: center;
+          .details {
+            padding: 0 10px;
+            overflow: hidden;
+            .name {
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: $main-text-color;
+              font-size: 14px;
+              line-height: 18px;
+            }
+            .info {
+              display: flex;
+              user-select: none;
+              .pill {
+                font-size: 11px;
+                line-height: 14px;
+                cursor: pointer;
+                border-radius: 5px;
+                color: $secondary-text-color;
+                padding: 0 4px;
+                margin-right: 5px;
+                .dots-pulse {
+                  animation: 2.5s ease-in-out infinite dots-pulse;
+                }
+                &.size {
+                  background-color: scale-color($background-color, $lightness: -10%);
+                }
+                &.uploading {
+                  background-color: scale-color($background-color, $lightness: -10%);
+                  color: $action-colour;
+                }
+                &.waiting {
+                  background-color: scale-color($background-color, $lightness: -10%);
+                }
+              }
+            }
+          }
+          .cancel-file,
+          .restart-file,
+          .success-file {
+            cursor: pointer;
+            transition: width 0.3s ease-in-out;
+            overflow: hidden;
+            display: flex;
+            width: 0;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              opacity: 1;
+            }
+            &.active-cancel,
+            &.active-restart,
+            &.active-success {
+              transition-delay: 0.3s;
+              width: 50px;
+            }
+          }
+          .success-file {
+            cursor: default;
+            .circle {
+              color: $action-colour;
+            }
+            svg {
+              color: darken($action-colour, 15%);
+            }
+          }
+          .restart-file {
+            opacity: 0.7;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          .cancel-file {
+            cursor: pointer;
+            color: $error-color;
+            &:hover {
+              .circle {
+                color: $error-color;
+                transition: color 0.2s ease-in-out;
+              }
+              .circle-x {
+                color: $error-color;
+                stroke-width: 2.5;
+                transition: color 0.2s ease-in-out, stroke-width 0.2s ease-in-out;
+              }
+            }
+            .circle {
+              color: lighten($error-color, 20%);
+            }
+          }
+        }
+        .progress-file {
+          grid-column: 1/-1;
+          width: 100%;
+          background-color: $action-colour;
+          transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+        }
+        .file-errors {
+          grid-column: 1/-1;
+          color: $error-color;
+          margin: 0 5px 5px 5px;
+          font-size: 13px;
+        }
+      }
+    }
+    &.drag-over {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes dots-pulse {
+    from {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

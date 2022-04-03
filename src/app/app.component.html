@@ -1,0 +1,61 @@
+<angular-dropzone
+  *ngIf="remakeComponentFlag; else loading"
+  [uploadAPI]="uploadApi"
+  (uploaded)="console.log($event)"
+  [autoUpload]="form.get('autoUpload')?.value"
+  [chunkUploadSize]="form.get('enabledChunkUpload')?.value ? form.get('chunkUploadSize')?.value : 0"
+  [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+  [maxFileSize]="form.get('maxFileSize')?.value"
+  [multiple]="form.get('multiple')?.value"
+  [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
+  [concurrentUploadLimit]="form.get('concurrentUploadLimit')?.value"
+  [maxFileLimit]="form.get('maxFileLimit')?.value"
+>
+  <div style="color: #8d959cab; font-size: 12px">
+    Max File Size {{ form.get('maxFileSize')?.value }} {{ form.get('fileSizeUnit')?.value }}
+  </div>
+  <div style="color: #8d959cab; font-size: 12px">Any custom message?</div>
+</angular-dropzone>
+
+<ng-template #loading><div class="loading">Loading...</div></ng-template>
+
+<div class="settings" [formGroup]="form">
+  <div class="toggles">
+    <mat-slide-toggle formControlName="autoUpload">Auto Upload</mat-slide-toggle>
+    <mat-slide-toggle formControlName="multiple">Multiple Select</mat-slide-toggle>
+    <mat-slide-toggle formControlName="keepInvalidFiles">keep Invalid Files</mat-slide-toggle>
+    <mat-form-field appearance="fill">
+      <mat-label>Concurrent Upload Limit</mat-label>
+      <input matInput type="number" placeholder="Ex. 12" formControlName="concurrentUploadLimit" min="1" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Max File Limit</mat-label>
+      <input matInput type="number" placeholder="Ex. 12" formControlName="maxFileLimit" min="-1" />
+    </mat-form-field>
+  </div>
+
+  <div class="units">
+    <label>Select Size Unit:</label>
+    <mat-radio-group formControlName="fileSizeUnit">
+      <mat-radio-button value="KB">KB</mat-radio-button>
+      <mat-radio-button value="MB">MB</mat-radio-button>
+      <mat-radio-button value="GB">GB</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="fill">
+      <mat-label>Max File Size</mat-label>
+      <input matInput type="number" placeholder="Ex. 100" formControlName="maxFileSize" min="1" />
+      <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
+    </mat-form-field>
+
+    <mat-slide-toggle formControlName="enabledChunkUpload">Chunk Upload?</mat-slide-toggle>
+
+    <mat-form-field appearance="fill" *ngIf="form.get('enabledChunkUpload')?.value">
+      <mat-label>Chunk Upload Size</mat-label>
+      <input matInput type="number" placeholder="Ex. 12" formControlName="chunkUploadSize" min="1" />
+      <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
+    </mat-form-field>
+  </div>
+  <div class="reset">
+    <button mat-stroked-button color="warn" (click)="onReset()">Reset</button>
+  </div>
+</div>

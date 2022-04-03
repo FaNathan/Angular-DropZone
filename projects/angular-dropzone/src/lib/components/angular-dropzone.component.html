@@ -1,0 +1,102 @@
+<div class="dropzone-container" #dropzoneContainer [ngStyle]="{ 'grid-template-rows': files.length > 0 ? 'auto 1fr' : '1fr' }">
+  <div class="drag-area">
+    <span class="main-message">Drag and Drop or <label class="browse-link" for="inputFile">Browse</label></span>
+    <input
+      id="inputFile"
+      type="file"
+      style="display: none"
+      (change)="onBrowseFiles($event)"
+      [multiple]="multiple"
+      [accept]="allowedFormatsString"
+    />
+    <ng-content></ng-content>
+  </div>
+
+  <div class="files-table" *ngIf="files.length > 0">
+    <div class="file-row" *ngFor="let item of files; index as i">
+      <div class="main-row">
+        <div title="stop" class="cancel-file" [ngClass]="{ 'active-cancel': item.status === fileStatus.Uploading }" (click)="onCancel(i)">
+          <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="circle-x"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="details">
+          <div class="name">
+            {{ item.file.name }}
+          </div>
+          <div class="info" *ngIf="item.status !== fileStatus.Canceled && item.status !== fileStatus.Completed">
+            <div title="Toggle Size Unit" class="pill size" (click)="onToggleSizeUnit()">
+              {{ item | convertSizeUnit: displayUnit }} {{ displayUnit }}
+            </div>
+            <div *ngIf="item.status === fileStatus.Uploading" class="pill uploading" (click)="onToggleSizeUnit()">
+              {{ item.status }}<span class="dots-pulse" *ngIf="item.status === fileStatus.Uploading">...</span>
+            </div>
+          </div>
+        </div>
+        <div
+          title="Restart"
+          class="restart-file"
+          [ngClass]="{ 'active-restart': item.status === fileStatus.Canceled }"
+          (click)="onRestart(i)"
+        >
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M10.5 14L7 10.625L10.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div title="Completed!" class="success-file" [ngClass]="{ 'active-success': item.status === fileStatus.Completed }">
+          <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 12.5L10 15.5L17 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="progress-file"
+        [ngStyle]="{ width: (item.loaded * 100) / (item.file.size || 1) + '%', height: item.status === fileStatus.Uploading ? '10px' : 0 }"
+        #file
+      ></div>
+      <ul class="file-errors" *ngIf="item.error.length > 0">
+        <li *ngFor="let error of item.error">
+          {{ error }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="status-bar" *ngIf="!autoUpload && files.length > 0">
+    <div title="Reset" class="action-button reset" (click)="onReset()">Reset</div>
+    <div title="Upload" class="action-button" (click)="onStartUpload()">Upload</div>
+  </div>
+</div>
