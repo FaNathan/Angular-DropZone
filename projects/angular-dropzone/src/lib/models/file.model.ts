@@ -23,7 +23,7 @@ export class QueuedFile {
 export class AngularDropzoneAPI {
   url = "https://your_url.com/upload";
   method: "POST" | "GET" = "POST";
-  headers: HttpHeaders | {
+  headers?: HttpHeaders | {
     [header: string]: string | string[];
   } = {
     };
@@ -34,10 +34,9 @@ export class AngularDropzoneAPI {
   responseType: "blob" | "arraybuffer" | "text" | "json" | undefined = 'blob';
   withCredentials = false;
 
-  constructor(url: string, method: "POST" | "GET", headers: HttpHeaders) {
+  constructor(url: string, method: "POST" | "GET") {
     this.url = url;
     this.method = method;
-    this.headers = headers;
   }
 
 }

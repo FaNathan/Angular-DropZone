@@ -108,6 +108,7 @@ $action-colour: #2f94fd;
             .info {
               display: flex;
               user-select: none;
+              flex-wrap: wrap;
               .pill {
                 font-size: 11px;
                 line-height: 14px;
@@ -115,7 +116,8 @@ $action-colour: #2f94fd;
                 border-radius: 5px;
                 color: $secondary-text-color;
                 padding: 0 4px;
-                margin-right: 5px;
+                margin: 0 5px 2px 0;
+                flex-shrink: 0;
                 .dots-pulse {
                   animation: 2.5s ease-in-out infinite dots-pulse;
                 }
