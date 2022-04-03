@@ -27,7 +27,7 @@ export class AngularDropzoneAPI {
     [header: string]: string | string[];
   } = {
     };
-  params: HttpParams | {
+  params?: HttpParams | {
     [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
   } = {
     }
