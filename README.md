@@ -84,6 +84,10 @@ This is an example of how to list things you need to use the software and how to
 2. import Module
 
       ```typescript
+        import { AngularDropzoneModule } from 'angular-dropzone';
+
+
+
         @NgModule({
           declarations: [
             AppComponent
