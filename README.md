@@ -3,7 +3,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h1 align="left">Angular DropZone</h3>
+<h1 align="left">Angular DropZone</h1>
     <div align="left">
      An advanced multi purpose file uploader for Angular
      TBC...
@@ -76,6 +76,7 @@ This is an example of how to list things you need to use the software and how to
         ```sh
         npm install angular-dropzone
         ```
+        
     or 
     
      * yarn
@@ -101,7 +102,7 @@ This is an example of how to list things you need to use the software and how to
           bootstrap: [AppComponent]
         })
       ```
- 3.    add your api to  ts file 
+ 3.    add your api 
        ```typescript
         // test.component.ts
         uploadApi = new AngularDropzoneAPI('http://sample_url:5000/FileUpload', 'POST');
