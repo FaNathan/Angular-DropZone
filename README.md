@@ -3,10 +3,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h3 align="left">Angular DropZone (Beta)</h3>
+<h1 align="left">Angular DropZone</h3>
     <div align="left">
      An advanced multi purpose file uploader for Angular
-  TBC...
+     TBC...
   
   <br/>
   <a href="https://fanathan.github.io/Angular-DropZone/">Demo</a>
@@ -43,7 +43,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+### About The Project
 
 
 
@@ -77,6 +77,7 @@ This is an example of how to list things you need to use the software and how to
         npm install angular-dropzone
         ```
     or 
+    
      * yarn
         ```sh
         yarn add angular-dropzone
