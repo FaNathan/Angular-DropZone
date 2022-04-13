@@ -5,7 +5,18 @@ export class QueuedFile {
   file: File;
   status: FileStatus;
   error: string[];
-  loaded: number; // amount of uploaded bytes
+  // loaded: number; // amount of uploaded bytes
+  progress: number;
+  private _loaded = 0;
+
+  public set loaded(v: number) {
+    this.progress = +((v * 100) / (this.file.size || 1)).toPrecision(2);
+    this._loaded = 0;
+  }
+
+  public get loaded(): number {
+    return this._loaded;
+  }
 
   constructor(file: File);
   constructor(file: File, status?: FileStatus, error?: number) {
@@ -15,6 +26,7 @@ export class QueuedFile {
       this.status = FileStatus.Ready;
       this.error = [];
       this.loaded = 0;
+      this.progress = 0;
     }
 
   }

@@ -14,6 +14,7 @@ export const defaultMaxFileLimit = -1; // Unlimited
 export const defaultMaxFileSize = 40000;
 export const defaultFileSizeUnit = 'MB';
 export const defaultChunkUploadSize = 0;
+export const defaultAvatarSize = 150;
 
 export type FileSizeTypes = "KB" | "MB" | "GB";
 

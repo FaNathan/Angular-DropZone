@@ -1,23 +1,72 @@
-<angular-dropzone
-  *ngIf="remakeComponentFlag; else loading"
-  [uploadAPI]="uploadApi"
-  (uploaded)="console.log($event)"
-  [autoUpload]="form.get('autoUpload')?.value"
-  [chunkUploadSize]="form.get('enabledChunkUpload')?.value ? form.get('chunkUploadSize')?.value : 0"
-  [fileSizeUnit]="form.get('fileSizeUnit')?.value"
-  [maxFileSize]="form.get('maxFileSize')?.value"
-  [multiple]="form.get('multiple')?.value"
-  [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
-  [concurrentUploadLimit]="form.get('concurrentUploadLimit')?.value"
-  [maxFileLimit]="form.get('maxFileLimit')?.value"
->
-  <div style="color: #8d959cab; font-size: 12px">
-    Max File Size {{ form.get('maxFileSize')?.value }} {{ form.get('fileSizeUnit')?.value }}
-  </div>
-  <div style="color: #8d959cab; font-size: 12px">Any custom message?</div>
-</angular-dropzone>
+<mat-tab-group mat-align-tabs="start" selectedIndex="1">
+  <mat-tab label="Full">
+    <angular-dropzone
+      class="full-uploader"
+      *ngIf="remakeComponentFlag; else loading"
+      [uploadAPI]="uploadApi"
+      (uploaded)="console.log($event)"
+      [autoUpload]="form.get('autoUpload')?.value"
+      [chunkUploadSize]="form.get('enabledChunkUpload')?.value ? form.get('chunkUploadSize')?.value : 0"
+      [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+      [maxFileSize]="form.get('maxFileSize')?.value"
+      [multiple]="form.get('multiple')?.value"
+      [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
+      [concurrentUploadLimit]="form.get('concurrentUploadLimit')?.value"
+      [maxFileLimit]="form.get('maxFileLimit')?.value"
+    >
+      <div class="custom-template">
+        <label for="inputFile" style="color: #8d959cab; font-size: 12px">
+          Max File Size {{ form.get('maxFileSize')?.value }} {{ form.get('fileSizeUnit')?.value }}
+        </label>
+      </div>
+    </angular-dropzone>
 
-<ng-template #loading><div class="loading">Loading...</div></ng-template>
+    <ng-template #loading><div class="loading">Loading...</div></ng-template>
+  </mat-tab>
+  <mat-tab label="Profile">
+    <div class="avatar-uploader">
+      <angular-dropzone
+        *ngIf="remakeComponentFlag; else loading"
+        [uploadAPI]="uploadApi"
+        (uploaded)="console.log($event)"
+        [avatarMode]="true"
+        [maxFileSize]="300"
+        [fileSizeUnit]="'KB'"
+        [avatar]="{
+          width: 250,
+          height: 250,
+          round: false
+        }"
+      >
+        <!-- srcImage: 'https://i.picsum.photos/id/760/536/354.jpg?hmac=k8_iypkz8Qgdy6OnLw4KUKduMcWi01nc2sgJBAKWSq8' -->
+      </angular-dropzone>
+
+      <angular-dropzone
+        *ngIf="remakeComponentFlag; else loading"
+        [uploadAPI]="uploadApi"
+        (uploaded)="console.log($event)"
+        [autoUpload]="false"
+        [chunkUploadSize]="form.get('enabledChunkUpload')?.value ? form.get('chunkUploadSize')?.value : 0"
+        [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+        [maxFileSize]="form.get('maxFileSize')?.value"
+        [multiple]="form.get('multiple')?.value"
+        [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
+        [concurrentUploadLimit]="form.get('concurrentUploadLimit')?.value"
+        [maxFileLimit]="form.get('maxFileLimit')?.value"
+        [avatarMode]="true"
+        [avatar]="{
+          width: 200,
+          height: 200,
+          round: true
+        }"
+      >
+      </angular-dropzone>
+    </div>
+
+    <ng-template #loading><div class="loading">Loading...</div></ng-template>
+  </mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
 
 <div class="settings" [formGroup]="form">
   <div class="toggles">
