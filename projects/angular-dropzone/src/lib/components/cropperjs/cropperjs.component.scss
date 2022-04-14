@@ -9,9 +9,13 @@
   max-width: 100%;
 }
 
-.roundCropper .cropper-view-box,
-.roundCropper .cropper-face {
+.roundCropper {
   border-radius: 50%;
+  overflow: hidden;
+  .cropper-view-box,
+  .cropper-face {
+    border-radius: 50%;
+  }
 }
 
 .actions {

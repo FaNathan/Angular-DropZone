@@ -1,0 +1,135 @@
+@import '../variables.scss';
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .dropzone-container {
+    color: $secondary-text-color;
+    display: grid;
+    background-color: $background-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-out;
+    height: 100%;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      .actions-container {
+        height: 90px !important;
+        &.uploading,
+        &.upload-error {
+          height: 100% !important;
+        }
+      }
+    }
+    &.drag-over {
+      opacity: 0.5;
+    }
+
+    .avatar-uploader {
+      border: 2px solid #575e65ba;
+      color: #575e65ba;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      box-sizing: border-box;
+      position: relative;
+      .uploaded-image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        > img {
+          overflow: hidden;
+          object-fit: cover;
+        }
+        > svg {
+          width: 100%;
+          height: 100%;
+          stroke-width: 0.3;
+          circle {
+            stroke-width: 0.3;
+          }
+        }
+      }
+      label {
+        &:hover {
+          cursor: pointer;
+          color: black;
+          transform: color 0.3s ease-in-out;
+        }
+        font-size: 12px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: inherit;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    }
+    .actions-container {
+      background-color: #787878b5;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      display: flex;
+      align-items: center;
+      transition: height 0.3s ease-in-out;
+      justify-content: center;
+      overflow: hidden;
+      flex-direction: column;
+      color: white;
+      &.upload-error {
+        background-color: $error-color;
+        height: 100%;
+      }
+      &.uploading {
+        background-color: $action-color;
+        height: 100%;
+      }
+      > svg {
+        cursor: pointer;
+        opacity: 0.7;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &.small-container {
+        .action-button {
+          .title {
+            display: none;
+          }
+        }
+      }
+      .action-button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 30px;
+        height: 45px;
+        font-size: 10px;
+        margin: 0 5px;
+      }
+      .error-messages {
+        display: flex;
+        flex-direction: column;
+        padding: 0 3ch;
+        overflow: auto;
+        font-size: 12px;
+      }
+      .panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        justify-content: center;
+        height: 90px;
+      }
+    }
+  }
+}

@@ -1,18 +1,15 @@
-import { AngularDropzoneAPI, ValidatorFunction } from './../models/file.model';
+import { AngularDropzoneAPI, ValidatorFunction } from '../models/file.model';
 import { HttpEventType, HttpProgressEvent } from '@angular/common/http';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { catchError, of, takeWhile } from 'rxjs';
 import { AngularDropzoneService } from '../services/angular-dropzone.service';
 
-import { defaultAvatarSize, defaultChunkUploadSize, defaultConcurrentUploadLimit, defaultFileSizeUnit, defaultMaxFileLimit, defaultMaxFileSize, FileSizeTypes, FileStatus, SizeUnits } from '../models/constants';
+import { defaultChunkUploadSize, defaultConcurrentUploadLimit, defaultFileSizeUnit, defaultMaxFileLimit, defaultMaxFileSize, FileSizeTypes, FileStatus, SizeUnits } from '../models/constants';
 import { QueuedFile } from '../models/file.model';
-@Component({
-  selector: 'angular-dropzone',
-  templateUrl: './angular-dropzone.component.html',
-  styleUrls: ['./angular-dropzone.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+@Directive({
+  selector: 'angular-core',
 })
-export class AngularDropzoneComponent implements OnInit {
+export class AngularDropzoneBase implements OnInit {
 
 
   @Input() multiple = true;
@@ -26,8 +23,7 @@ export class AngularDropzoneComponent implements OnInit {
   @Input() allowedFormats: string[] = [];
   @Input() autoUpload = true;
   @Input() chunkUploadSize = defaultChunkUploadSize;
-  @Input() avatarMode = false;
-  @Input() avatar: { width: number, height: number, round: boolean, srcImage?: any } = { width: defaultAvatarSize, height: defaultAvatarSize, round: true };
+
   @Output() uploaded = new EventEmitter<{ currentFile: QueuedFile, allFiles: QueuedFile[] }>();
   files: QueuedFile[] = [];
   fileStatus = FileStatus;
@@ -37,8 +33,7 @@ export class AngularDropzoneComponent implements OnInit {
   @ViewChild('dropzoneContainer', { static: true }) container!: ElementRef<HTMLDivElement>;
   private dragEnterCounter = 0;
   avatarEditMode = false;
-  @HostBinding('style.width') width?: string;
-  @HostBinding('style.height') height?: string;
+
   @HostListener('dragenter', ['$event']) onDragEnter(el: DragEvent) {
     this.dragEnterCounter++;
     if (!this.container.nativeElement.classList.contains('drag-over')) {
@@ -67,22 +62,6 @@ export class AngularDropzoneComponent implements OnInit {
   ngOnInit(): void {
     if (!this.uploadAPI) {
       throw ("Endpoint is not provided");
-    }
-    if (this.avatarMode) {
-      if (this.avatar.width) {
-        this.width = `${this.avatar.width}px`;
-        this.height = `${this.avatar.height}px`;
-        if (this.allowedFormats.length === 0) {
-          this.allowedFormats.push('MIME:image/*');
-        }
-        this.autoUpload = false;
-        this.chunkUploadSize = 0;
-        this.concurrentUploadLimit = 1;
-        this.keepInvalidFiles = true;
-        this.multiple = false;
-      } else {
-        throw ("Avatar details is not provided");
-      }
     }
     this.displayUnit = this.fileSizeUnit;
     this.chunkUploadSize = this.chunkUploadSize * SizeUnits[this.fileSizeUnit];
@@ -145,8 +124,6 @@ export class AngularDropzoneComponent implements OnInit {
         if (this.checkConcurrentUpload(index)) {
           if (this.autoUpload) {
             this.upload(index);
-          } else if (this.avatarMode && !this.avatarEditMode) {
-            this.avatarEditMode = true;
           }
         }
       }
@@ -326,20 +303,6 @@ export class AngularDropzoneComponent implements OnInit {
   onCancel(index: number) {
     this.files[index].status = FileStatus.Canceled;
     this.files[index].loaded = 0;
-  }
-  onCancelEdit() {
-    this.files = this.files.filter(f => f.status === this.fileStatus.Completed);
-    this.avatarEditMode = false;
-    this.concurrentUploadLimit++;
-    console.log(this);
-  }
-  convertBlobToBase64(blob: Blob, element: HTMLImageElement) {
-    let reader = new FileReader();
-    reader.readAsDataURL(blob); // converts the blob to base64 and calls onload
-
-    reader.onload = function () {
-      element.src = reader.result as string; // data url
-    };
   }
   onReset() {
     this.concurrentUploadLimit += this.files.filter(f => f.status === FileStatus.Ready).length;

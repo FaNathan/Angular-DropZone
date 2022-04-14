@@ -1,6 +1,6 @@
 <mat-tab-group mat-align-tabs="start" selectedIndex="1">
   <mat-tab label="Full">
-    <angular-dropzone
+    <lib-dropzone-advanced
       class="full-uploader"
       *ngIf="remakeComponentFlag; else loading"
       [uploadAPI]="uploadApi"
@@ -19,19 +19,18 @@
           Max File Size {{ form.get('maxFileSize')?.value }} {{ form.get('fileSizeUnit')?.value }}
         </label>
       </div>
-    </angular-dropzone>
+    </lib-dropzone-advanced>
 
     <ng-template #loading><div class="loading">Loading...</div></ng-template>
   </mat-tab>
   <mat-tab label="Profile">
     <div class="avatar-uploader">
-      <angular-dropzone
+      <dropzone-avatar
         *ngIf="remakeComponentFlag; else loading"
         [uploadAPI]="uploadApi"
         (uploaded)="console.log($event)"
-        [avatarMode]="true"
-        [maxFileSize]="300"
-        [fileSizeUnit]="'KB'"
+        [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+        [maxFileSize]="form.get('maxFileSize')?.value"
         [avatar]="{
           width: 250,
           height: 250,
@@ -39,9 +38,9 @@
         }"
       >
         <!-- srcImage: 'https://i.picsum.photos/id/760/536/354.jpg?hmac=k8_iypkz8Qgdy6OnLw4KUKduMcWi01nc2sgJBAKWSq8' -->
-      </angular-dropzone>
+      </dropzone-avatar>
 
-      <angular-dropzone
+      <!-- <angular-dropzone
         *ngIf="remakeComponentFlag; else loading"
         [uploadAPI]="uploadApi"
         (uploaded)="console.log($event)"
@@ -60,7 +59,20 @@
           round: true
         }"
       >
-      </angular-dropzone>
+      </angular-dropzone> -->
+
+      <dropzone-avatar
+        *ngIf="remakeComponentFlag; else loading"
+        [uploadAPI]="uploadApi"
+        (uploaded)="console.log($event)"
+        [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+        [maxFileSize]="form.get('maxFileSize')?.value"
+        [avatar]="{
+          width: 100,
+          height: 300,
+          round: true
+        }"
+      ></dropzone-avatar>
     </div>
 
     <ng-template #loading><div class="loading">Loading...</div></ng-template>

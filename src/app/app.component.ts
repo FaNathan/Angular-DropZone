@@ -1,6 +1,6 @@
 import { HttpHeaders } from '@angular/common/http';
 import { defaultMaxFileSize, defaultChunkUploadSize, defaultFileSizeUnit, defaultConcurrentUploadLimit, defaultMaxFileLimit } from './../../projects/angular-dropzone/src/lib/models/constants';
-import { AngularDropzoneComponent } from './../../projects/angular-dropzone/src/lib/components/angular-dropzone.component';
+import { AngularDropzoneBase } from '../../projects/angular-dropzone/src/lib/components/angular-dropzone-base.component';
 import { ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Component } from '@angular/core';
 import { AngularDropzoneAPI } from 'projects/angular-dropzone/src/lib/models/file.model';
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   console = console;
   remakeComponentFlag = true;
   debug = false;
-  @ViewChild(AngularDropzoneComponent) dropzone!: ElementRef<AngularDropzoneComponent>;
+  @ViewChild(AngularDropzoneBase) dropzone!: ElementRef<AngularDropzoneBase>;
 
   uploadApi = new AngularDropzoneAPI('http://localhost:5000/FileUpload/UploadLargeFile', 'POST');
 

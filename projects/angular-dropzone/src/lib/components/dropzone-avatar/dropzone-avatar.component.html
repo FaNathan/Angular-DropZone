@@ -1,0 +1,158 @@
+<div class="dropzone-container" #dropzoneContainer>
+  <input
+    id="inputFile"
+    type="file"
+    style="display: none"
+    (change)="onBrowseFiles($event)"
+    [multiple]="false"
+    [accept]="allowedFormatsString"
+    #avatarBrowse
+  />
+
+  <div
+    class="avatar-uploader"
+    [ngStyle]="{
+      'width.px': avatar.width,
+      'height.px': avatar.height,
+      'border-radius': avatar.round ? '50%' : '0',
+      overflow: avatarEditMode ? 'visible' : 'hidden'
+    }"
+  >
+    <ng-container *ngIf="!avatarEditMode">
+      <div class="uploaded-image">
+        <img
+          #uploadedImage
+          *ngIf="
+            this.files[this.files.length - 1]?.file && this.files[this.files.length - 1].status === fileStatus.Completed;
+            else placeholder
+          "
+          [ngStyle]="{ 'border-radius': avatar.round ? '50%' : 0 }"
+          [src]="convertBlobToBase64(this.files[this.files.length - 1].file, uploadedImage)"
+        />
+        <ng-template #placeholder>
+          <!-- placeholder -->
+          <svg
+            *ngIf="avatar.round"
+            width="24"
+            height="24"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18" stroke="currentColor" stroke-linecap="round" />
+            <path
+              d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            *ngIf="!avatar.round"
+            width="24"
+            height="24"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18" stroke="currentColor" stroke-linecap="round" />
+            <path
+              d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </ng-template>
+      </div>
+      <div
+        class="actions-container"
+        [ngClass]="{
+          'upload-error':
+            files[files.length - 1]?.status === fileStatus.Canceled || files[files.length - 1]?.status === fileStatus.Unsupported,
+          uploading: files[files.length - 1]?.status === fileStatus.Uploading,
+          'small-container': avatar.width <= 100
+        }"
+      >
+        <!-- edit icon -->
+        <ng-container [ngSwitch]="files[files.length - 1]?.status">
+          <ng-container *ngSwitchCase="fileStatus.Uploading"> Uploading({{ files[files.length - 1].progress }}%) </ng-container>
+          <div (click)="onRestart(files.length - 1)" class="action-button" *ngSwitchCase="fileStatus.Canceled" title="Restart">
+            <svg title="restart" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M10.5 14L7 10.625L10.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="title">
+              {{ files[files.length - 1].error[0] }}
+            </div>
+          </div>
+          <ng-container *ngSwitchDefault>
+            <div class="error-messages" *ngFor="let error of files[files.length - 1]?.error">
+              <div>-{{ error }}</div>
+            </div>
+            <div class="panel">
+              <div (click)="avatarBrowse.click()" class="action-button" [title]="files.length === 0 ? 'Add' : 'Change'">
+                <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 21L12 21H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M12.2218 5.82839L15.0503 2.99996L20 7.94971L17.1716 10.7781M12.2218 5.82839L6.61522 11.435C6.42769 11.6225 6.32233 11.8769 6.32233 12.1421L6.32233 16.6776L10.8579 16.6776C11.1231 16.6776 11.3774 16.5723 11.565 16.3847L17.1716 10.7781M12.2218 5.82839L17.1716 10.7781"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="title">{{ files.length === 0 ? 'Add' : 'Change' }}</div>
+              </div>
+              <div
+                title="Cancel"
+                (click)="onCancelEdit()"
+                *ngIf="files[files.length - 1]?.status === fileStatus.Unsupported"
+                class="action-button"
+              >
+                <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="circle-x"
+                  />
+                  <path
+                    class="circle"
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div class="title">Cancel</div>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+    <lib-cropperjs
+      *ngIf="avatarEditMode"
+      [file]="files[this.files.length - 1].file"
+      [avatar]="{ width: avatar.width, height: avatar.height - (avatar.round ? 0 : 50), round: avatar.round }"
+      (croppedAvatar)="onAvatarCropped($event)"
+      (cancelCrop)="onCancelEdit()"
+    ></lib-cropperjs>
+  </div>
+</div>
