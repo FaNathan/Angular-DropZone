@@ -22,6 +22,7 @@
       <div class="uploaded-image">
         <img
           class="valid-image"
+          draggable="false"
           #uploadedImage
           *ngIf="
             this.files[this.files.length - 1]?.file && this.files[this.files.length - 1].status === fileStatus.Completed;
@@ -51,6 +52,7 @@
             />
           </svg>
           <svg
+          class="valid-svg"
             *ngIf="!avatar.round"
             width="24"
             height="24"

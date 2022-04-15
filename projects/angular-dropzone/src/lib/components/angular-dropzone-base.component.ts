@@ -58,7 +58,7 @@ export class AngularDropzoneBase implements OnInit {
     return false;
   }
 
-  constructor(private dropZoneService: AngularDropzoneService, private cdRef: ChangeDetectorRef) { }
+  constructor(private dropZoneService: AngularDropzoneService, public cdRef: ChangeDetectorRef) { }
   ngOnInit(): void {
     if (!this.uploadAPI) {
       throw ("Endpoint is not provided");

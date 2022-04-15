@@ -35,6 +35,10 @@ export class DropzoneAvatarComponent extends AngularDropzoneBase implements OnCh
     }
   }
   override analyseFile(index: number) {
+    if(this.avatarEditMode){
+      this.files.splice(this.files.length -1 , 1);
+      return;
+    }
     if (this.checkMaxUploadCount(index)) {
       if (this.validateFile(index)) {
         if (this.checkConcurrentUpload(index)) {

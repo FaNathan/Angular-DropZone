@@ -49,7 +49,7 @@ export const dumpFiles_6 = {
     lastModifiedDate: 'Sat Dec 25 2021 18:08:16 GMT+1030 (Australian Central Daylight Time',
     name: "Screen_5.tiff",
     size: 113598,
-    type: "image/png",
+    type: "image/tiff",
     webkitRelativePath: ""
   },
 

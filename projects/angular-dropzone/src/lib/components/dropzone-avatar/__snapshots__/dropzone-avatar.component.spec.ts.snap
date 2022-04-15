@@ -1,0 +1,776 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropzoneAvatarComponent should back to first state on cancel edit 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode="false"
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit={[Function Number]}
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: visible;"
+    >
+      <lib-cropperjs>
+        <div
+          class="roundCropper"
+          style="width: 150px; height: 150px;"
+        >
+          <img
+            class="image-cropper"
+          />
+        </div>
+        <div
+          class="actions"
+        >
+          <svg
+            class="cancel-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="success-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M7 12.5L10 15.5L17 8.5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </lib-cropperjs>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
+
+exports[`DropzoneAvatarComponent should go to edit mode on valid file 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode={[Function Boolean]}
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit="0"
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: visible;"
+    >
+      <lib-cropperjs>
+        <div
+          class="roundCropper"
+          style="width: 150px; height: 150px;"
+        >
+          <img
+            class="image-cropper"
+          />
+        </div>
+        <div
+          class="actions"
+        >
+          <svg
+            class="cancel-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="success-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M7 12.5L10 15.5L17 8.5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </lib-cropperjs>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
+
+exports[`DropzoneAvatarComponent should not be able to add file on editmode 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode={[Function Boolean]}
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit="0"
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: visible;"
+    >
+      <lib-cropperjs>
+        <div
+          class="roundCropper"
+          style="width: 150px; height: 150px;"
+        >
+          <img
+            class="image-cropper"
+          />
+        </div>
+        <div
+          class="actions"
+        >
+          <svg
+            class="cancel-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="success-file"
+            fill="none"
+            height="30"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="circle-x"
+              d="M7 12.5L10 15.5L17 8.5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="circle"
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </lib-cropperjs>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
+
+exports[`DropzoneAvatarComponent shouldn't go to edit mode on invalid file name 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode="false"
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit={[Function Number]}
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,.png,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;"
+    >
+      <div
+        class="uploaded-image"
+      >
+        <svg
+          class="valid-svg"
+          fill="none"
+          height="24"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18"
+            stroke="currentColor"
+            stroke-linecap="round"
+          />
+          <path
+            d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div
+        class="actions-container upload-error"
+      >
+        <div
+          class="error-messages"
+        >
+          <div>
+            -File type is not supported.
+          </div>
+        </div>
+        <div
+          class="error-messages"
+        >
+          <div>
+            -File type is not supported.
+          </div>
+        </div>
+        <div
+          class="panel"
+        >
+          <div
+            class="action-button"
+            title="Change"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 21L12 21H21"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.2218 5.82839L15.0503 2.99996L20 7.94971L17.1716 10.7781M12.2218 5.82839L6.61522 11.435C6.42769 11.6225 6.32233 11.8769 6.32233 12.1421L6.32233 16.6776L10.8579 16.6776C11.1231 16.6776 11.3774 16.5723 11.565 16.3847L17.1716 10.7781M12.2218 5.82839L17.1716 10.7781"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Change
+            </div>
+          </div>
+          <div
+            class="action-button"
+            title="Cancel"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
+
+exports[`DropzoneAvatarComponent shouldn't go to edit mode on valid file 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode="false"
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit={[Function Number]}
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;"
+    >
+      <div
+        class="uploaded-image"
+      >
+        <svg
+          class="valid-svg"
+          fill="none"
+          height="24"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18"
+            stroke="currentColor"
+            stroke-linecap="round"
+          />
+          <path
+            d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div
+        class="actions-container upload-error"
+      >
+        <div
+          class="error-messages"
+        >
+          <div>
+            -File type is not supported.
+          </div>
+        </div>
+        <div
+          class="panel"
+        >
+          <div
+            class="action-button"
+            title="Change"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 21L12 21H21"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.2218 5.82839L15.0503 2.99996L20 7.94971L17.1716 10.7781M12.2218 5.82839L6.61522 11.435C6.42769 11.6225 6.32233 11.8769 6.32233 12.1421L6.32233 16.6776L10.8579 16.6776C11.1231 16.6776 11.3774 16.5723 11.565 16.3847L17.1716 10.7781M12.2218 5.82839L17.1716 10.7781"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Change
+            </div>
+          </div>
+          <div
+            class="action-button"
+            title="Cancel"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
+
+exports[`DropzoneAvatarComponent shouldn't go to edit mode on valid file Mime type 1`] = `
+<dropzone-avatar
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload="false"
+  avatar={[Function Object]}
+  avatarEditMode="false"
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit={[Function Number]}
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+  >
+    <input
+      accept="image/*,"
+      id="inputFile"
+      style="display: none;"
+      type="file"
+    />
+    <div
+      class="avatar-uploader"
+      style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden;"
+    >
+      <div
+        class="uploaded-image"
+      >
+        <svg
+          class="valid-svg"
+          fill="none"
+          height="24"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18"
+            stroke="currentColor"
+            stroke-linecap="round"
+          />
+          <path
+            d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div
+        class="actions-container upload-error"
+      >
+        <div
+          class="error-messages"
+        >
+          <div>
+            -File type is not supported.
+          </div>
+        </div>
+        <div
+          class="panel"
+        >
+          <div
+            class="action-button"
+            title="Change"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 21L12 21H21"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.2218 5.82839L15.0503 2.99996L20 7.94971L17.1716 10.7781M12.2218 5.82839L6.61522 11.435C6.42769 11.6225 6.32233 11.8769 6.32233 12.1421L6.32233 16.6776L10.8579 16.6776C11.1231 16.6776 11.3774 16.5723 11.565 16.3847L17.1716 10.7781M12.2218 5.82839L17.1716 10.7781"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Change
+            </div>
+          </div>
+          <div
+            class="action-button"
+            title="Cancel"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div
+              class="title"
+            >
+              Cancel
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dropzone-avatar>
+`;
