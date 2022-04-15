@@ -66,11 +66,11 @@ export class AngularDropzoneBase implements OnInit {
     this.displayUnit = this.fileSizeUnit;
     this.chunkUploadSize = this.chunkUploadSize * SizeUnits[this.fileSizeUnit];
     this.allowedFormats.forEach(format => {
-      if (format.includes('MIME:')) {
-        this.allowedFormatsString += `${format.replace('MIME:', '')},`
-      } else {
-        this.allowedFormatsString += `.${format},`
-      }
+      // if (format.includes('MIME:')) {
+      //   this.allowedFormatsString += `${format.replace('MIME:', '')},`
+      // } else {
+      this.allowedFormatsString += `.${format.toLowerCase()},`
+      // }
     })
     if (this.maxFileSize) {
       this.validateFunctions.push(

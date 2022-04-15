@@ -1,14 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -761,18 +759,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -940,18 +936,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -998,18 +992,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -1720,18 +1712,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -1912,18 +1902,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload one file finished 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file finished 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2084,18 +2072,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2142,18 +2128,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit match fileSizeUnit KB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit KB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2334,18 +2318,16 @@ exports[`AngularDropzoneComponent Unit match fileSizeUnit KB 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit match fileSizeUnit MB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit MB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2526,18 +2508,16 @@ exports[`AngularDropzoneComponent Unit match fileSizeUnit MB 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit toggle  MB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2718,18 +2698,16 @@ exports[`AngularDropzoneComponent Unit toggle  MB 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit toggle  MB 2`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 2`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2890,779 +2868,16 @@ exports[`AngularDropzoneComponent Unit toggle  MB 2`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  allowed Formats 1`] = `
-<angular-dropzone
-  __ngContext__={[Function LRootView]}
-  allowedFormats={[Function Array]}
-  allowedFormatsString={[Function String]}
-  autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
-  avatarEditMode="false"
-  avatarMode="false"
-  cdRef={[Function ViewRef$1]}
-  chunkUploadSize="0"
-  concurrentUploadLimit={[Function Number]}
-  container={[Function ElementRef]}
-  displayUnit={[Function String]}
-  dragEnterCounter="0"
-  dropZoneService={[Function AngularDropzoneService]}
-  fileRow={[Function QueryList]}
-  fileSizeUnit={[Function String]}
-  fileStatus={[Function Object]}
-  files={[Function Array]}
-  height={[Function Number]}
-  keepInvalidFiles={[Function Boolean]}
-  maxFileLimit={[Function Number]}
-  maxFileSize={[Function Number]}
-  multiple={[Function Boolean]}
-  uploadAPI={[Function AngularDropzoneAPI]}
-  uploaded={[Function EventEmitter_]}
-  validateFunctions={[Function Array]}
-  width={[Function Number]}
->
-  <div
-    class="dropzone-container"
-    style="grid-template-rows: auto 1fr;"
-  >
-    <div
-      class="drag-area"
-    >
-      <span
-        class="main-message"
-      >
-        Drag and Drop or 
-        <label
-          class="browse-link"
-          for="inputFile"
-        >
-          Browse
-        </label>
-      </span>
-      <input
-        accept=".JPG,.PNG,"
-        id="inputFile"
-        multiple=""
-        style="display: none;"
-        type="file"
-      />
-    </div>
-    <div
-      class="files-table"
-    >
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_0.png 
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file active-success"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 100%; height: 0px;"
-        />
-      </div>
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_1.png 
-            </div>
-            <div
-              class="info"
-            >
-              <div
-                class="pill size"
-                title="Toggle Size Unit"
-              >
-                 0.000 of 0.108 MB 
-              </div>
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 0%; height: 0px;"
-        />
-        <ul
-          class="file-errors"
-        >
-          <li>
-             Wrong File 
-          </li>
-          <li>
-             Wrong File2 
-          </li>
-        </ul>
-      </div>
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_2.png 
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file active-success"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 100%; height: 0px;"
-        />
-      </div>
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_3_Loooooooooooooooooooooooong_nameeeeeeeeeeeeeeeeeeeeeeeee.png 
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file active-success"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 100%; height: 0px;"
-        />
-      </div>
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_4.png 
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file active-success"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 100%; height: 0px;"
-        />
-      </div>
-      <div
-        class="file-row"
-      >
-        <div
-          class="main-row"
-        >
-          <div
-            class="cancel-file"
-            title="stop"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="circle-x"
-                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="details"
-          >
-            <div
-              class="name"
-            >
-               Screen_5.tiff 
-            </div>
-            <div
-              class="info"
-            >
-              <div
-                class="pill size"
-                title="Toggle Size Unit"
-              >
-                 0.000 of 0.108 MB 
-              </div>
-            </div>
-          </div>
-          <div
-            class="restart-file"
-            title="Restart"
-          >
-            <svg
-              fill="none"
-              height="30"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 14L7 10.625L10.5 7"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="success-file"
-            title="Completed!"
-          >
-            <svg
-              fill="none"
-              height="30"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 12.5L10 15.5L17 8.5"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                class="circle"
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="progress-file"
-          style="width: 0%; height: 0px;"
-        />
-        <ul
-          class="file-errors"
-        >
-          <li>
-             File type is not supported. 
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</angular-dropzone>
-`;
-
-exports[`AngularDropzoneComponent Validate functions  many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -4393,18 +3608,16 @@ exports[`AngularDropzoneComponent Validate functions  many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  many files- ignore invalid file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  many files- ignore invalid file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -5005,18 +4218,16 @@ exports[`AngularDropzoneComponent Validate functions  many files- ignore invalid
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  max file size 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  max file size 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -5835,18 +5046,16 @@ exports[`AngularDropzoneComponent Validate functions  max file size 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  one file - ignore invalid file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  one file - ignore invalid file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -5893,18 +5102,16 @@ exports[`AngularDropzoneComponent Validate functions  one file - ignore invalid 
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -6085,18 +5292,16 @@ exports[`AngularDropzoneComponent Validate functions  one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent add new file in the middle of another upload 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent add new file in the middle of another upload 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -6367,18 +5572,16 @@ exports[`AngularDropzoneComponent add new file in the middle of another upload 1
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7105,18 +6308,16 @@ exports[`AngularDropzoneComponent autoUpload off many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7293,18 +6494,16 @@ exports[`AngularDropzoneComponent autoUpload off one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7351,18 +6550,16 @@ exports[`AngularDropzoneComponent autoUpload off zero file 1`] = `
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent cancel upload many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent cancel upload many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -8073,18 +7270,16 @@ exports[`AngularDropzoneComponent cancel upload many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent cancel upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent cancel upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -8245,18 +7440,16 @@ exports[`AngularDropzoneComponent cancel upload one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -9035,18 +8228,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid fi
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid files and validation error 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files and validation error 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -9828,18 +9019,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid fi
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -10110,18 +9299,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent resume upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent resume upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -10282,18 +9469,16 @@ exports[`AngularDropzoneComponent resume upload one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent upload more than max concurrent file 6 files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent upload more than max concurrent file 6 files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
-  avatar={[Function Object]}
   avatarEditMode="false"
-  avatarMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -11004,5 +10189,5 @@ exports[`AngularDropzoneComponent upload more than max concurrent file 6 files 1
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
