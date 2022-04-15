@@ -17,7 +17,7 @@ import { debounceTime, tap } from 'rxjs';
 export class AppComponent implements OnInit {
 
   title = 'angular-dropzone-app';
-  defaultValues = {
+  advancedDefaultValues = {
     autoUpload: true,
     chunkUploadSize: 5,
     fileSizeUnit: defaultFileSizeUnit,
@@ -28,7 +28,18 @@ export class AppComponent implements OnInit {
     maxFileLimit: defaultMaxFileLimit,
     enabledChunkUpload: false,
   }
-  form = this.fb.group(this.defaultValues)
+  avatarDefaultValues = {
+    autoUpload: false,
+    chunkUploadSize: 0,
+    fileSizeUnit: defaultFileSizeUnit,
+    maxFileSize: defaultMaxFileSize,
+    multiple: false,
+    keepInvalidFiles: true,
+    concurrentUploadLimit: 1,
+    maxFileLimit: defaultMaxFileLimit,
+    enabledChunkUpload: false,
+  }
+  form = this.fb.group(this.advancedDefaultValues)
   console = console;
   remakeComponentFlag = true;
   debug = false;
@@ -47,7 +58,17 @@ export class AppComponent implements OnInit {
     })
   }
 
-  onReset() {
-    this.form.setValue(this.defaultValues)
+  onReset(index: number) {
+    switch (index) {
+      case 0:
+        this.form.setValue(this.advancedDefaultValues)
+        break;
+      case 1:
+        this.form.setValue(this.avatarDefaultValues)
+        break;
+
+      default:
+        break;
+    }
   }
 }

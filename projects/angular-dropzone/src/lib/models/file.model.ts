@@ -1,7 +1,7 @@
 import { HttpHeaders, HttpParams } from "@angular/common/http";
 import { FileStatus } from "./constants";
 
-export class QueuedFile {
+export class DropZoneFile {
   file: File;
   status: FileStatus;
   error: string[];
@@ -59,7 +59,7 @@ export interface ChunkInfo {
 }
 
 export interface ValidatorFunction {
-  fn: (file: QueuedFile) => boolean;
+  fn: (file: DropZoneFile) => boolean;
   errorMessage: string;
 }
 

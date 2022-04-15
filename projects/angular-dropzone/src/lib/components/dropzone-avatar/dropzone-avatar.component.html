@@ -52,7 +52,7 @@
             />
           </svg>
           <svg
-          class="valid-svg"
+            class="valid-svg"
             *ngIf="!avatar.round"
             width="24"
             height="24"
@@ -110,7 +110,7 @@
               <div>-{{ error }}</div>
             </div>
             <div class="panel">
-              <div (click)="avatarBrowse.click()" class="action-button" [title]="files.length === 0 ? 'Add' : 'Change'">
+              <div class="browse-file" (click)="avatarBrowse.click()" [title]="files.length === 0 ? 'Add' : 'Change'">
                 <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 21L12 21H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                   <path

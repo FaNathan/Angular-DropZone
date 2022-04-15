@@ -5,7 +5,7 @@ import { catchError, of, takeWhile } from 'rxjs';
 import { AngularDropzoneService } from '../services/angular-dropzone.service';
 
 import { defaultChunkUploadSize, defaultConcurrentUploadLimit, defaultFileSizeUnit, defaultMaxFileLimit, defaultMaxFileSize, FileSizeTypes, FileStatus, SizeUnits } from '../models/constants';
-import { QueuedFile } from '../models/file.model';
+import { DropZoneFile } from '../models/file.model';
 @Directive({
   selector: 'angular-core',
 })
@@ -24,8 +24,8 @@ export class AngularDropzoneBase implements OnInit {
   @Input() autoUpload = true;
   @Input() chunkUploadSize = defaultChunkUploadSize;
 
-  @Output() uploaded = new EventEmitter<{ currentFile: QueuedFile, allFiles: QueuedFile[] }>();
-  files: QueuedFile[] = [];
+  @Output() uploaded = new EventEmitter<{ currentFile: DropZoneFile, allFiles: DropZoneFile[] }>();
+  files: DropZoneFile[] = [];
   fileStatus = FileStatus;
   displayUnit: FileSizeTypes = defaultFileSizeUnit;
   allowedFormatsString: string = '';
@@ -116,7 +116,7 @@ export class AngularDropzoneBase implements OnInit {
     }
     if (inputFiles) {
       for (let i = 0; i < inputFiles.length; i++) {
-        this.files.push(new QueuedFile(inputFiles[i]));
+        this.files.push(new DropZoneFile(inputFiles[i]));
         this.analyseFile(this.files.length - 1);
       }
     }

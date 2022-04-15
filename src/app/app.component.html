@@ -1,4 +1,4 @@
-<mat-tab-group mat-align-tabs="start" selectedIndex="1">
+<mat-tab-group #matTabGroup mat-align-tabs="start" selectedIndex="0" (selectedIndexChange)="onReset(matTabGroup.selectedIndex!)">
   <mat-tab label="Full">
     <lib-dropzone-advanced
       class="full-uploader"
@@ -82,16 +82,30 @@
 
 <div class="settings" [formGroup]="form">
   <div class="toggles">
-    <mat-slide-toggle formControlName="autoUpload">Auto Upload</mat-slide-toggle>
-    <mat-slide-toggle formControlName="multiple">Multiple Select</mat-slide-toggle>
-    <mat-slide-toggle formControlName="keepInvalidFiles">keep Invalid Files</mat-slide-toggle>
+    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 1" formControlName="autoUpload">Auto Upload</mat-slide-toggle>
+    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 1" formControlName="multiple">Multiple Select</mat-slide-toggle>
+    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 1" formControlName="keepInvalidFiles">keep Invalid Files</mat-slide-toggle>
     <mat-form-field appearance="fill">
       <mat-label>Concurrent Upload Limit</mat-label>
-      <input matInput type="number" placeholder="Ex. 12" formControlName="concurrentUploadLimit" min="1" />
+      <input
+        [readonly]="matTabGroup.selectedIndex === 1"
+        matInput
+        type="number"
+        placeholder="Ex. 12"
+        formControlName="concurrentUploadLimit"
+        min="1"
+      />
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Max File Limit</mat-label>
-      <input matInput type="number" placeholder="Ex. 12" formControlName="maxFileLimit" min="-1" />
+      <input
+        [readonly]="matTabGroup.selectedIndex === 1"
+        matInput
+        type="number"
+        placeholder="Ex. 12"
+        formControlName="maxFileLimit"
+        min="-1"
+      />
     </mat-form-field>
   </div>
 
@@ -108,15 +122,22 @@
       <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
     </mat-form-field>
 
-    <mat-slide-toggle formControlName="enabledChunkUpload">Chunk Upload?</mat-slide-toggle>
+    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 1" formControlName="enabledChunkUpload">Chunk Upload?</mat-slide-toggle>
 
     <mat-form-field appearance="fill" *ngIf="form.get('enabledChunkUpload')?.value">
       <mat-label>Chunk Upload Size</mat-label>
-      <input matInput type="number" placeholder="Ex. 12" formControlName="chunkUploadSize" min="1" />
+      <input
+        [readonly]="matTabGroup.selectedIndex === 1"
+        matInput
+        type="number"
+        placeholder="Ex. 12"
+        formControlName="chunkUploadSize"
+        min="1"
+      />
       <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
     </mat-form-field>
   </div>
   <div class="reset">
-    <button mat-stroked-button color="warn" (click)="onReset()">Reset</button>
+    <button mat-stroked-button color="warn" (click)="onReset(matTabGroup.selectedIndex!)">Reset</button>
   </div>
 </div>

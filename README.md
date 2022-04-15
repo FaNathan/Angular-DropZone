@@ -114,20 +114,20 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-| Feature                 | Type                                                            | Default Value | Description                                                     |
-| ----------------------- | --------------------------------------------------------------- | ------------- | --------------------------------------------------------------- |
-| [allowedFormats]        | string[]                                                        | []            | Limit the type of input files                                   |
-| [chunkUploadSize]       | number                                                          | 0 (disabled)  | Allow to upload huge files (chunks should be handled by server) |
-| [autoUpload]            | boolean                                                         | true          | Start to upload automatically after adding files                |
-| [maxFileLimit]          | number                                                          | unlimited     | Limit the number of files                                       |
-| [multiple]              | boolean                                                         | true          | Add Single or Multiple files                                    |
-| [validateFunctions]     | ({ fn: (file: QueuedFile) => boolean, errorMessage: string })[] | empty         | Validation functions with custom error message.                 |
-| [keepInvalidFiles]      | boolean                                                         | true          | Keep invalid files and display an error message                 |
-| [maxFileSize]           | number                                                          | 4000 MB       | Limit the size of the input file                                |
-| [fileSizeUnit]          | "KB" , "MB" , "GB"                                              | "MB"          | File size unit                                                  |
-| [concurrentUploadLimit] | number                                                          | 5             | Number of files can be uploaded concurrently                    |
-| [uploadAPI]             | AngularDropzoneAPI                                              |               | API definition (URL,Headers,Method...)                          |
-| (uploaded)              | { currentFile: QueuedFile, allFiles: QueuedFile[] }             |               | Event Emitter of uploaded files to parent                       |
+| Feature                 | Type                                                              | Default Value | Description                                                     |
+| ----------------------- | ----------------------------------------------------------------- | ------------- | --------------------------------------------------------------- |
+| [allowedFormats]        | string[]                                                          | []            | Limit the type of input files                                   |
+| [chunkUploadSize]       | number                                                            | 0 (disabled)  | Allow to upload huge files (chunks should be handled by server) |
+| [autoUpload]            | boolean                                                           | true          | Start to upload automatically after adding files                |
+| [maxFileLimit]          | number                                                            | unlimited     | Limit the number of files                                       |
+| [multiple]              | boolean                                                           | true          | Add Single or Multiple files                                    |
+| [validateFunctions]     | ({ fn: (file: DropZoneFile) => boolean, errorMessage: string })[] | empty         | Validation functions with custom error message.                 |
+| [keepInvalidFiles]      | boolean                                                           | true          | Keep invalid files and display an error message                 |
+| [maxFileSize]           | number                                                            | 4000 MB       | Limit the size of the input file                                |
+| [fileSizeUnit]          | "KB" , "MB" , "GB"                                                | "MB"          | File size unit                                                  |
+| [concurrentUploadLimit] | number                                                            | 5             | Number of files can be uploaded concurrently                    |
+| [uploadAPI]             | AngularDropzoneAPI                                                |               | API definition (URL,Headers,Method...)                          |
+| (uploaded)              | { currentFile: DropZoneFile, allFiles: DropZoneFile[] }           |               | Event Emitter of uploaded files to parent                       |
 
 <!-- TABLE OF CONTENTS -->
 
@@ -137,7 +137,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### How to add a validation function:
 
-```typescript
+```typescriptf
     const myValidateFunctions = [
       {
         fn: (item) => item.size < 100000 , // logic should be here
