@@ -66,11 +66,11 @@ export class AngularDropzoneBase implements OnInit {
     this.displayUnit = this.fileSizeUnit;
     this.chunkUploadSize = this.chunkUploadSize * SizeUnits[this.fileSizeUnit];
     this.allowedFormats.forEach(format => {
-      // if (format.includes('MIME:')) {
-      //   this.allowedFormatsString += `${format.replace('MIME:', '')},`
-      // } else {
-      this.allowedFormatsString += `.${format.toLowerCase()},`
-      // }
+      if (format.includes('MIME:')) {
+        this.allowedFormatsString += `${format.replace('MIME:', '')},`
+      } else {
+        this.allowedFormatsString += `.${format.toLowerCase()},`
+      }
     })
     if (this.maxFileSize) {
       this.validateFunctions.push(
@@ -89,7 +89,17 @@ export class AngularDropzoneBase implements OnInit {
             if (extension.length === 0) {
               return false;
             }
-            return this.allowedFormats.some(f => f.toLowerCase() === extension[0].replace('.', '') || item.file.type.includes('image/'));// better regex for includes
+            let isValid = false;
+            this.allowedFormats.some(format => {
+              if (format.includes('MIME:')) {
+                isValid = !!(item.file.type.match(new RegExp(/\w+\/[-+.\w]+/g)));
+                return isValid;
+              } else {
+                isValid = format.toLowerCase() === extension[0].replace('.', '');
+                return isValid;
+              }
+            })
+            return isValid;
           }
           , errorMessage: 'File type is not supported.'
         }

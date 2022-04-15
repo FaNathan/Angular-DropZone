@@ -40,11 +40,11 @@
         height: 100%;
         width: 100%;
         display: flex;
-        > img {
+        .valid-image {
           overflow: hidden;
           object-fit: cover;
         }
-        > svg {
+        .valid-svg{
           width: 100%;
           height: 100%;
           stroke-width: 0.3;
@@ -52,22 +52,6 @@
             stroke-width: 0.3;
           }
         }
-      }
-      label {
-        &:hover {
-          cursor: pointer;
-          color: black;
-          transform: color 0.3s ease-in-out;
-        }
-        font-size: 12px;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: inherit;
-        align-items: center;
-        justify-content: space-evenly;
       }
     }
     .actions-container {

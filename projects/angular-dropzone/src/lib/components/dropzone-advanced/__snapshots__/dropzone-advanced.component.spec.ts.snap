@@ -2871,6 +2871,763 @@ exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 2`] = `
 </lib-dropzone-advanced>
 `;
 
+exports[`AngularDropzoneAdvancedComponent Validate functions  allowed Formats 1`] = `
+<lib-dropzone-advanced
+  __ngContext__={[Function LRootView]}
+  allowedFormats={[Function Array]}
+  allowedFormatsString={[Function String]}
+  autoUpload={[Function Boolean]}
+  avatarEditMode="false"
+  cdRef={[Function ViewRef$1]}
+  chunkUploadSize="0"
+  concurrentUploadLimit={[Function Number]}
+  container={[Function ElementRef]}
+  displayUnit={[Function String]}
+  dragEnterCounter="0"
+  dropZoneService={[Function AngularDropzoneService]}
+  fileRow={[Function QueryList]}
+  fileSizeUnit={[Function String]}
+  fileStatus={[Function Object]}
+  files={[Function Array]}
+  keepInvalidFiles={[Function Boolean]}
+  maxFileLimit={[Function Number]}
+  maxFileSize={[Function Number]}
+  multiple={[Function Boolean]}
+  uploadAPI={[Function AngularDropzoneAPI]}
+  uploaded={[Function EventEmitter_]}
+  validateFunctions={[Function Array]}
+>
+  <div
+    class="dropzone-container"
+    style="grid-template-rows: auto 1fr;"
+  >
+    <div
+      class="drag-area"
+    >
+      <span
+        class="main-message"
+      >
+        Drag and Drop or 
+        <label
+          class="browse-link"
+          for="inputFile"
+        >
+          Browse
+        </label>
+      </span>
+      <input
+        accept=".jpg,.png,"
+        id="inputFile"
+        multiple=""
+        style="display: none;"
+        type="file"
+      />
+    </div>
+    <div
+      class="files-table"
+    >
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_0.png 
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file active-success"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 100%; height: 0px;"
+        />
+      </div>
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_1.png 
+            </div>
+            <div
+              class="info"
+            >
+              <div
+                class="pill size"
+                title="Toggle Size Unit"
+              >
+                 0.000 of 0.108 MB 
+              </div>
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 0%; height: 0px;"
+        />
+        <ul
+          class="file-errors"
+        >
+          <li>
+             Wrong File 
+          </li>
+          <li>
+             Wrong File2 
+          </li>
+        </ul>
+      </div>
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_2.png 
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file active-success"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 100%; height: 0px;"
+        />
+      </div>
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_3_Loooooooooooooooooooooooong_nameeeeeeeeeeeeeeeeeeeeeeeee.png 
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file active-success"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 100%; height: 0px;"
+        />
+      </div>
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_4.png 
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file active-success"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 100%; height: 0px;"
+        />
+      </div>
+      <div
+        class="file-row"
+      >
+        <div
+          class="main-row"
+        >
+          <div
+            class="cancel-file"
+            title="stop"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="circle-x"
+                d="M9.17218 14.8284L12.0006 12M14.829 9.17157L12.0006 12M12.0006 12L9.17218 9.17157M12.0006 12L14.829 14.8284"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="details"
+          >
+            <div
+              class="name"
+            >
+               Screen_5.tiff 
+            </div>
+            <div
+              class="info"
+            >
+              <div
+                class="pill size"
+                title="Toggle Size Unit"
+              >
+                 0.000 of 0.108 MB 
+              </div>
+            </div>
+          </div>
+          <div
+            class="restart-file"
+            title="Restart"
+          >
+            <svg
+              fill="none"
+              height="30"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 10.625H14.2C14.2 10.625 14.2 10.625 14.2 10.625C14.2 10.625 17 10.625 17 13.625C17 17 14.2 17 14.2 17H13.4"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10.5 14L7 10.625L10.5 7"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="success-file"
+            title="Completed!"
+          >
+            <svg
+              fill="none"
+              height="30"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.5L10 15.5L17 8.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                class="circle"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="progress-file"
+          style="width: 0%; height: 0px;"
+        />
+        <ul
+          class="file-errors"
+        >
+          <li>
+             File type is not supported. 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</lib-dropzone-advanced>
+`;
+
 exports[`AngularDropzoneAdvancedComponent Validate functions  many files 1`] = `
 <lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
