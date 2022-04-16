@@ -1,8 +1,8 @@
 import { defaultAvatarSize } from './../../models/constants';
 import { Component, ViewEncapsulation, AfterViewInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
-import Cropper from 'cropperjs';
 import { AvatarCropper } from '../../models/file.model';
-
+//@ts-ignore
+import Cropper from './cropperjs-lib/cropper.js';
 @Component({
   selector: 'lib-cropperjs',
   templateUrl: './cropperjs.component.html',
@@ -39,6 +39,7 @@ export class CropperjsComponent implements AfterViewInit {
   }
 
   getImageBlob() {
+    //@ts-ignore
     this.cropperInstance.getCroppedCanvas().toBlob((blob) => {
       this.croppedAvatar.emit(new File([blob!], this.file.name));
     })
