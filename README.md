@@ -40,8 +40,11 @@
 -->
 
 <!-- ABOUT THE PROJECT -->
+### Avatar Mode
+<img align="center" width="530" alt="image" src="https://user-images.githubusercontent.com/102797896/161385043-c975368e-75d9-42f6-b5b1-7bd93f63a4a5.png">
 
-### About The Project
+
+### Advanced Mode
 
 <img align="center" width="530" alt="image" src="https://user-images.githubusercontent.com/102797896/161385043-c975368e-75d9-42f6-b5b1-7bd93f63a4a5.png">
 
@@ -113,6 +116,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+#### Advanced Mode
 
 | Feature                 | Type                                                              | Default Value | Description                                                     |
 | ----------------------- | ----------------------------------------------------------------- | ------------- | --------------------------------------------------------------- |
@@ -129,27 +133,43 @@ This is an example of how to list things you need to use the software and how to
 | [uploadAPI]             | AngularDropzoneAPI                                                |               | API definition (URL,Headers,Method...)                          |
 | (uploaded)              | { currentFile: DropZoneFile, allFiles: DropZoneFile[] }           |               | Event Emitter of uploaded files to parent                       |
 
+
+
+
+
+
+#### Avatar Mode
+
+| Feature                 | Type                                                              | Default Value | Description                                                     |
+| ----------------------- | ----------------------------------------------------------------- | ------------- | --------------------------------------------------------------- |
+| [allowedFormats]        | string[]                                                          |  ['MIME:Image/*']               | Limit the type of input files ( Append 'MIME:' If you are sending a MIME. i.e. ['MIME:Image/*']                                  |
+| [validateFunctions]     | ({ fn: (file: DropZoneFile) => boolean, errorMessage: string })[] | empty         | Validation functions with custom error message.                 |
+| [maxFileSize]           | number                                                            | 4000 MB       | Limit the size of the input file                                |
+| [uploadAPI]             | AngularDropzoneAPI                                                |               | API definition (URL,Headers,Method...)                          |
+| [avatar]             | { width: number, height: number, round: boolean, srcImage?: any }    | { width: 150, height: 150, round: true }               | Avatar size & shape                          |
+| (uploaded)              | { currentFile: DropZoneFile, allFiles: DropZoneFile[] }           |               | Event Emitter of uploaded files to parent                       |
+
 <!-- TABLE OF CONTENTS -->
 
 <!-- ABOUT THE PROJECT -->
 
-## Usage
 
 ### How to add a validation function:
 
 ```typescriptf
-    const myValidateFunctions = [
-      {
-        fn: (item) => item.size < 100000 , // logic should be here
-        errorMessage: 'File size is more than expected.' // custom error message
-      },
-      ...
-    ]
-
-    <angular-dropzone [validateFunctions]="myValidateFunctions"></angular-dropzone>
+const myValidateFunctions = [
+ {
+   fn: (item) => item.size < 100000 , // logic should be here
+   errorMessage: 'File size is more than expected.' // custom error message
+ },
+ ...
+]
+```
+```html
+<angular-dropzone [validateFunctions]="myValidateFunctions"></angular-dropzone>
 ```
 
-### How to add a custom template
+### How to add a custom message
 
 ```html
 <angular-dropzone [uploadAPI]="uploadApi">
