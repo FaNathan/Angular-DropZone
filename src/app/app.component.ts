@@ -65,6 +65,8 @@ export class AppComponent implements OnInit {
       this.cdRef.detectChanges();
     }), debounceTime(2000)).subscribe(() => {
       this.remakeComponentFlag = true;
+      this.avatarCropper.srcImage = '';
+      this.roundAvatarCropper.srcImage = '';
       this.cdRef.detectChanges();
     })
   }
