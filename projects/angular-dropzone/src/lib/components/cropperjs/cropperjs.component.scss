@@ -4,6 +4,9 @@
 :host {
   overflow: hidden;
 }
+.cropper-container {
+  overflow: hidden;
+}
 .image-cropper {
   display: block;
   max-width: 100%;
@@ -11,7 +14,6 @@
 
 .roundCropper {
   border-radius: 50%;
-  overflow: hidden;
   .cropper-view-box,
   .cropper-face {
     border-radius: 50%;

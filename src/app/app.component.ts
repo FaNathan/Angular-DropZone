@@ -1,5 +1,4 @@
-import { HttpHeaders } from '@angular/common/http';
-import { defaultMaxFileSize, defaultChunkUploadSize, defaultFileSizeUnit, defaultConcurrentUploadLimit, defaultMaxFileLimit } from './../../projects/angular-dropzone/src/lib/models/constants';
+import { defaultMaxFileSize, defaultFileSizeUnit, defaultConcurrentUploadLimit, defaultMaxFileLimit } from './../../projects/angular-dropzone/src/lib/models/constants';
 import { AngularDropzoneBase } from '../../projects/angular-dropzone/src/lib/components/angular-dropzone-base.component';
 import { ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Component } from '@angular/core';
@@ -39,7 +38,7 @@ export class AppComponent implements OnInit {
     maxFileLimit: defaultMaxFileLimit,
     enabledChunkUpload: false,
   }
-  form = this.fb.group(this.advancedDefaultValues)
+  form = this.fb.group(this.avatarDefaultValues)
   console = console;
   remakeComponentFlag = true;
   debug = false;
@@ -59,12 +58,13 @@ export class AppComponent implements OnInit {
   }
 
   onReset(index: number) {
+    console.log(index)
     switch (index) {
-      case 1:
-        this.form.setValue(this.advancedDefaultValues)
-        break;
       case 0:
         this.form.setValue(this.avatarDefaultValues)
+        break;
+      case 1:
+        this.form.setValue(this.advancedDefaultValues)
         break;
 
       default:

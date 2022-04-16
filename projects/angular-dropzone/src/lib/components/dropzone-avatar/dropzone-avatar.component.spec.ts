@@ -1,6 +1,6 @@
-import { ComponentFixture, fakeAsync, flush, flushMicrotasks, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { MockProvider } from 'ng-mocks';
-import { filter, interval, map, take, takeWhile, tap } from 'rxjs';
+import { interval, map, take } from 'rxjs';
 import { AngularDropzoneAPI } from '../../models/file.model';
 import { AngularDropzoneService } from '../../services/angular-dropzone.service';
 import { based64Image, dumpFiles_6 } from '../../models/dumpData';
@@ -56,6 +56,7 @@ describe('DropzoneAvatarComponent', () => {
   }
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture).toMatchSnapshot();
   });
 
   it('should go to edit mode on valid file', () => {

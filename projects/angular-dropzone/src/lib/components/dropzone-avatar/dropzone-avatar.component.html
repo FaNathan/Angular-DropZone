@@ -14,7 +14,7 @@
     [ngStyle]="{
       'width.px': avatar.width,
       'height.px': avatar.height,
-      'border-radius': avatar.round ? '50%' : '0',
+      'border-radius': avatar.round ? '50%' : '7px',
       overflow: avatarEditMode ? 'visible' : 'hidden'
     }"
   >
@@ -77,12 +77,16 @@
           'upload-error':
             files[files.length - 1]?.status === fileStatus.Canceled || files[files.length - 1]?.status === fileStatus.Unsupported,
           uploading: files[files.length - 1]?.status === fileStatus.Uploading,
-          'small-container': avatar.width <= 100
+          'small-container': avatar.width <= 150
         }"
       >
         <!-- edit icon -->
         <ng-container [ngSwitch]="files[files.length - 1]?.status">
-          <ng-container *ngSwitchCase="fileStatus.Uploading"> Uploading({{ files[files.length - 1].progress }}%) </ng-container>
+          <ng-container *ngSwitchCase="fileStatus.Uploading">
+          <div class="upload-in-progress" [style.width.%]="files[files.length - 1].progress">
+          </div>  
+          <div class="upload-in-text">Uploading({{ files[files.length - 1].progress }}%)</div>
+          </ng-container>
           <div (click)="onRestart(files.length - 1)" class="action-button" *ngSwitchCase="fileStatus.Canceled" title="Restart">
             <svg title="restart" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -110,7 +114,7 @@
               <div>-{{ error }}</div>
             </div>
             <div class="panel">
-              <div class="browse-file" (click)="avatarBrowse.click()" [title]="files.length === 0 ? 'Add' : 'Change'">
+              <div class="action-button" (click)="avatarBrowse.click()" [title]="files.length === 0 ? 'Add' : 'Change'">
                 <svg width="30" height="30" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 21L12 21H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                   <path
