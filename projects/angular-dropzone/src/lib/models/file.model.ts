@@ -63,3 +63,10 @@ export interface ValidatorFunction {
   errorMessage: string;
 }
 
+export interface AvatarCropper {
+  width: number;
+  height: number;
+  round: boolean;
+  srcImage?: any;
+}
+

@@ -1,53 +1,28 @@
-<mat-tab-group #matTabGroup mat-align-tabs="start" selectedIndex="0" (selectedIndexChange)="onReset(matTabGroup.selectedIndex!)">
+<mat-tab-group #matTabGroup mat-align-tabs="start" selectedIndex="0"
+  (selectedIndexChange)="onReset(matTabGroup.selectedIndex!)">
   <mat-tab label="Profile">
     <div class="avatar-uploader">
-      <dropzone-avatar
-        *ngIf="remakeComponentFlag; else loading"
-        [uploadAPI]="uploadApi"
-        (uploaded)="console.log($event)"
-        [fileSizeUnit]="form.get('fileSizeUnit')?.value"
-        [maxFileSize]="form.get('maxFileSize')?.value"
-        [allowedFormats]="['jpg']"
-        [avatar]="{
-          width: 200,
-          height: 200,
-          round: false
-        }"
-      >
-        <!-- srcImage: 'https://i.picsum.photos/id/760/536/354.jpg?hmac=k8_iypkz8Qgdy6OnLw4KUKduMcWi01nc2sgJBAKWSq8' -->
+      <dropzone-avatar *ngIf="remakeComponentFlag; else loading" [uploadAPI]="uploadApi"
+        (uploaded)="onAvatarUploaded($event, avatarCropper);" [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+        [maxFileSize]="form.get('maxFileSize')?.value" [allowedFormats]="['jpg']" [avatar]="avatarCropper">
       </dropzone-avatar>
-      <dropzone-avatar
-        *ngIf="remakeComponentFlag; else loading"
-        [uploadAPI]="uploadApi"
-        [allowedFormats]="['jpg']"
-        (uploaded)="console.log($event)"
-        [fileSizeUnit]="form.get('fileSizeUnit')?.value"
-        [maxFileSize]="form.get('maxFileSize')?.value"
-        [avatar]="{
-          width: 200,
-          height: 200,
-          round: true
-        }"
-      ></dropzone-avatar>
+      <dropzone-avatar *ngIf="remakeComponentFlag; else loading" [uploadAPI]="uploadApi" [allowedFormats]="['jpg']"
+        (uploaded)="onAvatarUploaded($event, roundAvatarCropper);" [fileSizeUnit]="form.get('fileSizeUnit')?.value"
+        [maxFileSize]="form.get('maxFileSize')?.value" [avatar]="roundAvatarCropper"></dropzone-avatar>
     </div>
 
-    <ng-template #loading><div class="loading">Loading...</div></ng-template>
+    <ng-template #loading>
+      <div class="loading">Loading...</div>
+    </ng-template>
   </mat-tab>
   <mat-tab label="Full">
-    <lib-dropzone-advanced
-      class="full-uploader"
-      *ngIf="remakeComponentFlag; else loading"
-      [uploadAPI]="uploadApi"
-      (uploaded)="console.log($event)"
-      [autoUpload]="form.get('autoUpload')?.value"
+    <lib-dropzone-advanced class="full-uploader" *ngIf="remakeComponentFlag; else loading" [uploadAPI]="uploadApi"
+      (uploaded)="console.log($event)" [autoUpload]="form.get('autoUpload')?.value"
       [chunkUploadSize]="form.get('enabledChunkUpload')?.value ? form.get('chunkUploadSize')?.value : 0"
-      [fileSizeUnit]="form.get('fileSizeUnit')?.value"
-      [maxFileSize]="form.get('maxFileSize')?.value"
-      [multiple]="form.get('multiple')?.value"
-      [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
+      [fileSizeUnit]="form.get('fileSizeUnit')?.value" [maxFileSize]="form.get('maxFileSize')?.value"
+      [multiple]="form.get('multiple')?.value" [keepInvalidFiles]="form.get('keepInvalidFiles')?.value"
       [concurrentUploadLimit]="form.get('concurrentUploadLimit')?.value"
-      [maxFileLimit]="form.get('maxFileLimit')?.value"
-    >
+      [maxFileLimit]="form.get('maxFileLimit')?.value">
       <div class="custom-template">
         <label for="inputFile" style="color: #8d959cab; font-size: 12px">
           Max File Size {{ form.get('maxFileSize')?.value }} {{ form.get('fileSizeUnit')?.value }}
@@ -55,37 +30,29 @@
       </div>
     </lib-dropzone-advanced>
 
-    <ng-template #loading><div class="loading">Loading...</div></ng-template>
+    <ng-template #loading>
+      <div class="loading">Loading...</div>
+    </ng-template>
   </mat-tab>
 
 </mat-tab-group>
 
 <div class="settings" [formGroup]="form">
   <div class="toggles">
-    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 0" formControlName="autoUpload">Auto Upload</mat-slide-toggle>
-    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 0" formControlName="multiple">Multiple Select</mat-slide-toggle>
-    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 0" formControlName="keepInvalidFiles">keep Invalid Files</mat-slide-toggle>
+    <mat-slide-toggle formControlName="autoUpload">Auto Upload</mat-slide-toggle>
+    <mat-slide-toggle formControlName="multiple">Multiple Select
+    </mat-slide-toggle>
+    <mat-slide-toggle formControlName="keepInvalidFiles">keep Invalid Files
+    </mat-slide-toggle>
     <mat-form-field appearance="fill">
       <mat-label>Concurrent Upload Limit</mat-label>
-      <input
-        [readonly]="matTabGroup.selectedIndex === 0"
-        matInput
-        type="number"
-        placeholder="Ex. 12"
-        formControlName="concurrentUploadLimit"
-        min="1"
-      />
+      <input [readonly]="matTabGroup.selectedIndex === 0" matInput type="number" placeholder="Ex. 12"
+        formControlName="concurrentUploadLimit" min="1" />
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Max File Limit</mat-label>
-      <input
-        [readonly]="matTabGroup.selectedIndex === 0"
-        matInput
-        type="number"
-        placeholder="Ex. 12"
-        formControlName="maxFileLimit"
-        min="-1"
-      />
+      <input [readonly]="matTabGroup.selectedIndex === 0" matInput type="number" placeholder="Ex. 12"
+        formControlName="maxFileLimit" min="-1" />
     </mat-form-field>
   </div>
 
@@ -102,18 +69,13 @@
       <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
     </mat-form-field>
 
-    <mat-slide-toggle [disabled]="matTabGroup.selectedIndex === 0" formControlName="enabledChunkUpload">Chunk Upload?</mat-slide-toggle>
+    <mat-slide-toggle formControlName="enabledChunkUpload">Chunk Upload?
+    </mat-slide-toggle>
 
     <mat-form-field appearance="fill" *ngIf="form.get('enabledChunkUpload')?.value">
       <mat-label>Chunk Upload Size</mat-label>
-      <input
-        [readonly]="matTabGroup.selectedIndex === 0"
-        matInput
-        type="number"
-        placeholder="Ex. 12"
-        formControlName="chunkUploadSize"
-        min="1"
-      />
+      <input [readonly]="matTabGroup.selectedIndex === 0" matInput type="number" placeholder="Ex. 12"
+        formControlName="chunkUploadSize" min="1" />
       <span matSuffix>{{ form.get('fileSizeUnit')?.value }}</span>
     </mat-form-field>
   </div>

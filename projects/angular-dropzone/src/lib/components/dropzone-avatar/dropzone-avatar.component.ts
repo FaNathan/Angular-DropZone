@@ -2,6 +2,7 @@ import { AngularDropzoneBase } from '../angular-dropzone-base.component';
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Input, HostBinding, OnChanges, SimpleChanges } from '@angular/core';
 import { AngularDropzoneService } from '../../services/angular-dropzone.service';
 import { defaultAvatarSize, defaultChunkUploadSize } from '../../models/constants';
+import { AvatarCropper } from '../../models/file.model';
 
 @Component({
   selector: 'dropzone-avatar',
@@ -10,7 +11,7 @@ import { defaultAvatarSize, defaultChunkUploadSize } from '../../models/constant
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropzoneAvatarComponent extends AngularDropzoneBase implements OnChanges {
-  @Input() avatar: { width: number, height: number, round: boolean, srcImage?: any } = { width: defaultAvatarSize, height: defaultAvatarSize, round: true };
+  @Input() avatar: AvatarCropper = { width: defaultAvatarSize, height: defaultAvatarSize, round: true };
   @Input() override readonly autoUpload = false;
   @Input() override readonly multiple = true;
   @Input() override readonly maxFileLimit = -1;

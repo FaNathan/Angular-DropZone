@@ -1,6 +1,7 @@
 import { defaultAvatarSize } from './../../models/constants';
 import { Component, ViewEncapsulation, AfterViewInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import Cropper from 'cropperjs';
+import { AvatarCropper } from '../../models/file.model';
 
 @Component({
   selector: 'lib-cropperjs',
@@ -11,7 +12,7 @@ import Cropper from 'cropperjs';
 export class CropperjsComponent implements AfterViewInit {
 
   @Input() file!: File;
-  @Input() avatar: { width: number, height: number, round: boolean } = { width: defaultAvatarSize, height: defaultAvatarSize, round: true };
+  @Input() avatar: AvatarCropper = { width: defaultAvatarSize, height: defaultAvatarSize, round: true };
   @Output() croppedAvatar = new EventEmitter<File>();
   @Output() cancelCrop = new EventEmitter<boolean>();
 
