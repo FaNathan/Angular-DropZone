@@ -122,12 +122,6 @@ export class AngularDropzoneBase implements OnInit {
     }
   }
 
-  onAvatarCropped(file: File) {
-    this.files[this.files.length - 1].file = file;
-    this.onStartUpload();
-    this.avatarEditMode = false;
-  }
-
   analyseFile(index: number) {
     if (this.checkMaxUploadCount(index)) {
       if (this.validateFile(index)) {

@@ -60,10 +60,10 @@ export class AppComponent implements OnInit {
 
   onReset(index: number) {
     switch (index) {
-      case 0:
+      case 1:
         this.form.setValue(this.advancedDefaultValues)
         break;
-      case 1:
+      case 0:
         this.form.setValue(this.avatarDefaultValues)
         break;
 

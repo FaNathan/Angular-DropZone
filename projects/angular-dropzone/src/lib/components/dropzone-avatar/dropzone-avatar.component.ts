@@ -35,8 +35,8 @@ export class DropzoneAvatarComponent extends AngularDropzoneBase implements OnCh
     }
   }
   override analyseFile(index: number) {
-    if(this.avatarEditMode){
-      this.files.splice(this.files.length -1 , 1);
+    if (this.avatarEditMode) {
+      this.files.splice(this.files.length - 1, 1);
       return;
     }
     if (this.checkMaxUploadCount(index)) {
@@ -48,6 +48,11 @@ export class DropzoneAvatarComponent extends AngularDropzoneBase implements OnCh
         }
       }
     }
+  }
+  onAvatarCropped(file: File) {
+    this.files[this.files.length - 1].file = file;
+    this.onStartUpload();
+    this.avatarEditMode = false;
   }
 
   override bringRowToTheView(index: number) {
