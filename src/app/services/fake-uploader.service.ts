@@ -26,7 +26,7 @@ export class FakeUploaderService {
         map((id) => id === 1 ? ({ type: 4, loaded: file.size }) : ({ type: 1, loaded: file.size + 1 })),
       );
     } else {
-      return interval(90).pipe(
+      return interval(300).pipe(
         take(21),
         map((id) => id === 20 ? ({ type: 4, loaded: file.size }) : ({ type: 1, loaded: id * (file.size / 20) })),
       );

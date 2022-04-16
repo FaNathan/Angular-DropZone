@@ -5,13 +5,12 @@ export class DropZoneFile {
   file: File;
   status: FileStatus;
   error: string[];
-  // loaded: number; // amount of uploaded bytes
   progress: number;
   private _loaded = 0;
 
   public set loaded(v: number) {
     this.progress = +((v * 100) / (this.file.size || 1)).toPrecision(2);
-    this._loaded = 0;
+    this._loaded = v;
   }
 
   public get loaded(): number {
