@@ -6,7 +6,6 @@
 <h1 align="left">Angular DropZone</h1>
     <div align="left">
      An advanced multi purpose file uploader for Angular
-     TBC...
   
   <br/>
   <a href="https://fanathan.github.io/Angular-DropZone/">Demo</a>
@@ -41,11 +40,16 @@
 
 <!-- ABOUT THE PROJECT -->
 ### Avatar Mode
+```html
+    <dropzone-avatar [uploadAPI]="uploadApi" [avatar]="roundAvatarCropper"></dropzone-avatar>
+   ```
 <img align="center" width="530" alt="image" src="https://user-images.githubusercontent.com/102797896/161385043-c975368e-75d9-42f6-b5b1-7bd93f63a4a5.png">
 
 
 ### Advanced Mode
-
+```html
+    <dropzone-advanced [uploadAPI]="uploadApi"></dropzone-advanced>
+   ```
 <img align="center" width="530" alt="image" src="https://user-images.githubusercontent.com/102797896/161385043-c975368e-75d9-42f6-b5b1-7bd93f63a4a5.png">
 
 ### Built With
@@ -106,9 +110,18 @@ This is an example of how to list things you need to use the software and how to
    ```typescript
    // test.component.ts
    uploadApi = new AngularDropzoneAPI('http://sample_url:5000/FileUpload', 'POST');
+   roundAvatarCropper = {
+    width: 200,
+    height: 200,
+    round: true, 
+    srcImage: '' // currently uploaded Image
+   }
    ```
    ```html
-   <angular-dropzone [uploadAPI]="uploadApi"></angular-dropzone>
+    // Avatar Mode
+    <dropzone-avatar [uploadAPI]="uploadApi" [avatar]="roundAvatarCropper"></dropzone-avatar>
+    // Advanced Mode
+    <dropzone-advanced [uploadAPI]="uploadApi"></dropzone-advanced>
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -146,7 +159,7 @@ This is an example of how to list things you need to use the software and how to
 | [validateFunctions]     | ({ fn: (file: DropZoneFile) => boolean, errorMessage: string })[] | empty         | Validation functions with custom error message.                 |
 | [maxFileSize]           | number                                                            | 4000 MB       | Limit the size of the input file                                |
 | [uploadAPI]             | AngularDropzoneAPI                                                |               | API definition (URL,Headers,Method...)                          |
-| [avatar]             | { width: number, height: number, round: boolean, srcImage?: any }    | { width: 150, height: 150, round: true }               | Avatar size & shape                          |
+| [avatar]             | { width: number, height: number, round: boolean, srcImage?: any }    | { width: 150, height: 150, round: true }               | Avatar size & shape. round=true => Circle mode, round=false => Square mode, srcImage => Currently Uploaded Image                      |
 | (uploaded)              | { currentFile: DropZoneFile, allFiles: DropZoneFile[] }           |               | Event Emitter of uploaded files to parent                       |
 
 <!-- TABLE OF CONTENTS -->
@@ -166,15 +179,15 @@ const myValidateFunctions = [
 ]
 ```
 ```html
-<angular-dropzone [validateFunctions]="myValidateFunctions"></angular-dropzone>
+<dropzone-advanced [validateFunctions]="myValidateFunctions"></dropzone-advanced>
 ```
 
 ### How to add a custom message
 
 ```html
-<angular-dropzone [uploadAPI]="uploadApi">
+<dropzone-advanced [uploadAPI]="uploadApi">
   <div style="color: darkgoldenrod; font-size: 12px">Max file size is 10 MB</div>
-</angular-dropzone>
+</dropzone-advanced>
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
