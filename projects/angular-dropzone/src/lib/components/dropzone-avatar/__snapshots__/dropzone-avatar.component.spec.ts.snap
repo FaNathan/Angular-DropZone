@@ -42,7 +42,7 @@ exports[`DropzoneAvatarComponent should back to first state on cancel edit 1`] =
     >
       <lib-cropperjs>
         <div
-          class="roundCropper"
+          class="cropper-container roundCropper"
           style="width: 150px; height: 150px;"
         >
           <img
@@ -173,13 +173,13 @@ exports[`DropzoneAvatarComponent should create 1`] = `
         </svg>
       </div>
       <div
-        class="actions-container"
+        class="actions-container small-container"
       >
         <div
           class="panel"
         >
           <div
-            class="browse-file"
+            class="action-button"
             title="Add"
           >
             <svg
@@ -258,7 +258,7 @@ exports[`DropzoneAvatarComponent should go to edit mode on valid file 1`] = `
     >
       <lib-cropperjs>
         <div
-          class="roundCropper"
+          class="cropper-container roundCropper"
           style="width: 150px; height: 150px;"
         >
           <img
@@ -365,7 +365,7 @@ exports[`DropzoneAvatarComponent should not be able to add file on editmode 1`] 
     >
       <lib-cropperjs>
         <div
-          class="roundCropper"
+          class="cropper-container roundCropper"
           style="width: 150px; height: 150px;"
         >
           <img
@@ -482,13 +482,13 @@ exports[`DropzoneAvatarComponent should upload after a sccuess crop 1`] = `
         />
       </div>
       <div
-        class="actions-container"
+        class="actions-container small-container"
       >
         <div
           class="panel"
         >
           <div
-            class="browse-file"
+            class="action-button"
             title="Change"
           >
             <svg
@@ -591,27 +591,32 @@ exports[`DropzoneAvatarComponent shouldn't go to edit mode on invalid file name 
         </svg>
       </div>
       <div
-        class="actions-container upload-error"
+        class="actions-container upload-error small-container"
       >
         <div
-          class="error-messages"
+          class="error-container"
         >
-          <div>
-            -File type is not supported.
-          </div>
-        </div>
-        <div
-          class="error-messages"
-        >
-          <div>
-            -File type is not supported.
+          <span
+            class="error-title"
+          >
+            Incorrect File!
+          </span>
+          <div
+            class="error-messages"
+          >
+            <span>
+              - File type is not supported.
+            </span>
+            <span>
+              - File type is not supported.
+            </span>
           </div>
         </div>
         <div
           class="panel"
         >
           <div
-            class="browse-file"
+            class="action-button"
             title="Change"
           >
             <svg
@@ -747,20 +752,29 @@ exports[`DropzoneAvatarComponent shouldn't go to edit mode on valid file Mime ty
         </svg>
       </div>
       <div
-        class="actions-container upload-error"
+        class="actions-container upload-error small-container"
       >
         <div
-          class="error-messages"
+          class="error-container"
         >
-          <div>
-            -File type is not supported.
+          <span
+            class="error-title"
+          >
+            Incorrect File!
+          </span>
+          <div
+            class="error-messages"
+          >
+            <span>
+              - File type is not supported.
+            </span>
           </div>
         </div>
         <div
           class="panel"
         >
           <div
-            class="browse-file"
+            class="action-button"
             title="Change"
           >
             <svg
