@@ -1,6 +1,6 @@
 import { AngularDropzoneAPI, ValidatorFunction } from '../models/file.model';
 import { HttpEventType, HttpProgressEvent } from '@angular/common/http';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { catchError, of, takeWhile } from 'rxjs';
 import { AngularDropzoneService } from '../services/angular-dropzone.service';
 
