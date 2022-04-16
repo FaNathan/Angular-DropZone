@@ -3,7 +3,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { AngularDropzoneService } from '../../services/angular-dropzone.service';
 
 @Component({
-  selector: 'lib-dropzone-advanced',
+  selector: 'dropzone-advanced',
   templateUrl: './dropzone-advanced.component.html',
   styleUrls: ['./dropzone-advanced.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

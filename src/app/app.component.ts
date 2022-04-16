@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     width: 200,
     height: 200,
     round: true,
-    srcImage: 'https://i.picsum.photos/id/760/536/354.jpg?hmac=k8_iypkz8Qgdy6OnLw4KUKduMcWi01nc2sgJBAKWSq8'
+    srcImage: ''
   };
   avatarCropper = {
     width: 200,
@@ -69,7 +69,9 @@ export class AppComponent implements OnInit {
     })
   }
 
-  onReset(index: number) {
+  onIndexChanged(index: number) {
+    this.avatarCropper.srcImage = '';
+    this.roundAvatarCropper.srcImage = '';
     switch (index) {
       case 0:
         this.form.reset(this.avatarDefaultValues);
