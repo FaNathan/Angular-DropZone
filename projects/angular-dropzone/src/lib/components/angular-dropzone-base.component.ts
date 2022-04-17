@@ -1,19 +1,15 @@
-import { AngularDropzoneAPI, ValidatorFunction } from './../models/file.model';
-import { dumpFiles_6 } from './../models/dumpData';
+import { AngularDropzoneAPI, ValidatorFunction } from '../models/file.model';
 import { HttpEventType, HttpProgressEvent } from '@angular/common/http';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ChangeDetectorRef, Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { catchError, of, takeWhile } from 'rxjs';
 import { AngularDropzoneService } from '../services/angular-dropzone.service';
 
 import { defaultChunkUploadSize, defaultConcurrentUploadLimit, defaultFileSizeUnit, defaultMaxFileLimit, defaultMaxFileSize, FileSizeTypes, FileStatus, SizeUnits } from '../models/constants';
-import { QueuedFile } from '../models/file.model';
-@Component({
-  selector: 'angular-dropzone',
-  templateUrl: './angular-dropzone.component.html',
-  styleUrls: ['./angular-dropzone.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+import { DropZoneFile } from '../models/file.model';
+@Directive({
+  selector: 'angular-core',
 })
-export class AngularDropzoneComponent implements OnInit {
+export class AngularDropzoneBase implements OnInit {
 
 
   @Input() multiple = true;
@@ -27,14 +23,17 @@ export class AngularDropzoneComponent implements OnInit {
   @Input() allowedFormats: string[] = [];
   @Input() autoUpload = true;
   @Input() chunkUploadSize = defaultChunkUploadSize;
-  @Output() uploaded = new EventEmitter<{ currentFile: QueuedFile, allFiles: QueuedFile[] }>();
-  files: QueuedFile[] = [];
+
+  @Output() uploaded = new EventEmitter<{ currentFile: DropZoneFile, allFiles: DropZoneFile[] }>();
+  files: DropZoneFile[] = [];
   fileStatus = FileStatus;
   displayUnit: FileSizeTypes = defaultFileSizeUnit;
   allowedFormatsString: string = '';
   @ViewChildren('file') fileRow = new QueryList<ElementRef<HTMLDivElement>>();
   @ViewChild('dropzoneContainer', { static: true }) container!: ElementRef<HTMLDivElement>;
   private dragEnterCounter = 0;
+  avatarEditMode = false;
+
   @HostListener('dragenter', ['$event']) onDragEnter(el: DragEvent) {
     this.dragEnterCounter++;
     if (!this.container.nativeElement.classList.contains('drag-over')) {
@@ -59,7 +58,7 @@ export class AngularDropzoneComponent implements OnInit {
     return false;
   }
 
-  constructor(private dropZoneService: AngularDropzoneService, private cdRef: ChangeDetectorRef) { }
+  constructor(private dropZoneService: AngularDropzoneService, public cdRef: ChangeDetectorRef) { }
   ngOnInit(): void {
     if (!this.uploadAPI) {
       throw ("Endpoint is not provided");
@@ -67,7 +66,11 @@ export class AngularDropzoneComponent implements OnInit {
     this.displayUnit = this.fileSizeUnit;
     this.chunkUploadSize = this.chunkUploadSize * SizeUnits[this.fileSizeUnit];
     this.allowedFormats.forEach(format => {
-      this.allowedFormatsString += `.${format},`
+      if (format.includes('MIME:')) {
+        this.allowedFormatsString += `${format.replace('MIME:', '')},`
+      } else {
+        this.allowedFormatsString += `.${format.toLowerCase()},`
+      }
     })
     if (this.maxFileSize) {
       this.validateFunctions.push(
@@ -86,7 +89,17 @@ export class AngularDropzoneComponent implements OnInit {
             if (extension.length === 0) {
               return false;
             }
-            return this.allowedFormats.some(f => f.toLowerCase() === extension[0].replace('.', ''));
+            let isValid = false;
+            this.allowedFormats.some(format => {
+              if (format.includes('MIME:')) {
+                isValid = !!(item.file.type.match(new RegExp(/\w+\/[-+.\w]+/g)));
+                return isValid;
+              } else {
+                isValid = format.toLowerCase() === extension[0].replace('.', '');
+                return isValid;
+              }
+            })
+            return isValid;
           }
           , errorMessage: 'File type is not supported.'
         }
@@ -103,12 +116,11 @@ export class AngularDropzoneComponent implements OnInit {
     }
     if (inputFiles) {
       for (let i = 0; i < inputFiles.length; i++) {
-        this.files.push(new QueuedFile(inputFiles[i]));
+        this.files.push(new DropZoneFile(inputFiles[i]));
         this.analyseFile(this.files.length - 1);
       }
     }
   }
-
 
   analyseFile(index: number) {
     if (this.checkMaxUploadCount(index)) {
@@ -331,5 +343,4 @@ export class AngularDropzoneComponent implements OnInit {
         break;
     }
   }
-
 }

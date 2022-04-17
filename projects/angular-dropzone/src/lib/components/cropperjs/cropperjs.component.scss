@@ -1,0 +1,90 @@
+@import './cropperjs-lib/cropper.css';
+
+@import '../variables.scss';
+
+:host {
+  overflow: hidden;
+}
+
+.cropper-container {
+  overflow: hidden;
+}
+
+.image-cropper {
+  display: block;
+  max-width: 100%;
+}
+
+.roundCropper {
+  border-radius: 50%;
+
+  .cropper-view-box,
+  .cropper-face {
+    border-radius: 50%;
+  }
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-evenly;
+
+  .cancel-file,
+  .success-file {
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    width: 40px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .success-file {
+    .circle {
+      color: $action-color;
+    }
+
+    svg {
+      color: darken($action-color, 15%);
+    }
+
+    &:hover {
+      .circle {
+        color: $action-color;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .circle-x {
+        color: $action-color;
+        stroke-width: 2.5;
+        transition: color 0.2s ease-in-out, stroke-width 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .cancel-file {
+    &:hover {
+      .circle {
+        color: $error-color;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .circle-x {
+        color: $error-color;
+        stroke-width: 2.5;
+        transition: color 0.2s ease-in-out, stroke-width 0.2s ease-in-out;
+      }
+    }
+
+    .circle {
+      color: lighten($error-color, 20%);
+    }
+  }
+}

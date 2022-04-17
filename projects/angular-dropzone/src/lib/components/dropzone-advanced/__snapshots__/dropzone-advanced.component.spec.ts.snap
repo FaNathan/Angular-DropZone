@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -758,15 +759,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -934,15 +936,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Canceled on Error zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -989,15 +992,16 @@ exports[`AngularDropzoneComponent All files' status should be Canceled on Error 
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -1708,15 +1712,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -1897,15 +1902,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload one file finished 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file finished 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2066,15 +2072,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent All files' status should be Completed on successful upload zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2121,15 +2128,16 @@ exports[`AngularDropzoneComponent All files' status should be Completed on succe
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit match fileSizeUnit KB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit KB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2310,15 +2318,16 @@ exports[`AngularDropzoneComponent Unit match fileSizeUnit KB 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit match fileSizeUnit MB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit MB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2499,15 +2508,16 @@ exports[`AngularDropzoneComponent Unit match fileSizeUnit MB 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit toggle  MB 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2683,20 +2693,21 @@ exports[`AngularDropzoneComponent Unit toggle  MB 1`] = `
         </div>
         <div
           class="progress-file"
-          style="width: 0.06162080318315463%; height: 10px;"
+          style="width: 0.062%; height: 10px;"
         />
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Unit toggle  MB 2`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 2`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2857,15 +2868,16 @@ exports[`AngularDropzoneComponent Unit toggle  MB 2`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  allowed Formats 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  allowed Formats 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString={[Function String]}
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -2904,7 +2916,7 @@ exports[`AngularDropzoneComponent Validate functions  allowed Formats 1`] = `
         </label>
       </span>
       <input
-        accept=".JPG,.PNG,"
+        accept=".jpg,.png,"
         id="inputFile"
         multiple=""
         style="display: none;"
@@ -3613,15 +3625,16 @@ exports[`AngularDropzoneComponent Validate functions  allowed Formats 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -4352,15 +4365,16 @@ exports[`AngularDropzoneComponent Validate functions  many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  many files- ignore invalid file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  many files- ignore invalid file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -4961,15 +4975,16 @@ exports[`AngularDropzoneComponent Validate functions  many files- ignore invalid
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  max file size 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  max file size 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -5788,15 +5803,16 @@ exports[`AngularDropzoneComponent Validate functions  max file size 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  one file - ignore invalid file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  one file - ignore invalid file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -5843,15 +5859,16 @@ exports[`AngularDropzoneComponent Validate functions  one file - ignore invalid 
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent Validate functions  one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent Validate functions  one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -6032,15 +6049,16 @@ exports[`AngularDropzoneComponent Validate functions  one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent add new file in the middle of another upload 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent add new file in the middle of another upload 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -6311,15 +6329,16 @@ exports[`AngularDropzoneComponent add new file in the middle of another upload 1
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7046,15 +7065,16 @@ exports[`AngularDropzoneComponent autoUpload off many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7231,15 +7251,16 @@ exports[`AngularDropzoneComponent autoUpload off one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent autoUpload off zero file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent autoUpload off zero file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload="false"
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -7286,15 +7307,16 @@ exports[`AngularDropzoneComponent autoUpload off zero file 1`] = `
       />
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent cancel upload many files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent cancel upload many files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -8005,15 +8027,16 @@ exports[`AngularDropzoneComponent cancel upload many files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent cancel upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent cancel upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -8174,15 +8197,16 @@ exports[`AngularDropzoneComponent cancel upload one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -8961,15 +8985,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid fi
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid files and validation error 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files and validation error 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -9751,15 +9776,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files - keep invalid fi
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent max file limit limit 2 files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -10030,15 +10056,16 @@ exports[`AngularDropzoneComponent max file limit limit 2 files 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent resume upload one file 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent resume upload one file 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -10199,15 +10226,16 @@ exports[`AngularDropzoneComponent resume upload one file 1`] = `
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;
 
-exports[`AngularDropzoneComponent upload more than max concurrent file 6 files 1`] = `
-<angular-dropzone
+exports[`AngularDropzoneAdvancedComponent upload more than max concurrent file 6 files 1`] = `
+<lib-dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
   autoUpload={[Function Boolean]}
+  avatarEditMode="false"
   cdRef={[Function ViewRef$1]}
   chunkUploadSize="0"
   concurrentUploadLimit={[Function Number]}
@@ -10918,5 +10946,5 @@ exports[`AngularDropzoneComponent upload more than max concurrent file 6 files 1
       </div>
     </div>
   </div>
-</angular-dropzone>
+</lib-dropzone-advanced>
 `;

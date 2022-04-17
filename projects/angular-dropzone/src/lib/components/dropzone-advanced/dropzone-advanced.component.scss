@@ -1,14 +1,8 @@
-$background-color: #e4e6ea;
-$row-background: #bbbfc4;
-$border-color: #1b4480;
-$error-color: #e10032;
-$main-text-color: #464646;
-$secondary-text-color: #73777a;
-$action-colour: #2f94fd;
+@import '../variables.scss';
 :host {
-  overflow: hidden;
   height: 100%;
   width: 100%;
+  display: flex;
   .dropzone-container {
     color: $secondary-text-color;
     display: grid;
@@ -17,6 +11,7 @@ $action-colour: #2f94fd;
     box-sizing: border-box;
     transition: height 0.3s ease-out;
     height: 100%;
+    width: 100%;
     .drag-area {
       display: flex;
       flex-direction: column;
@@ -45,32 +40,32 @@ $action-colour: #2f94fd;
       display: grid;
       grid-template-columns: repeat(2, 100px);
       justify-content: end;
-      .action-button {
-        width: 100px;
-        height: 35px;
-        border: 2px solid $action-colour;
-        color: $action-colour;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        box-sizing: border-box;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        user-select: none;
-        &:hover {
-          background-color: $action-colour;
-          color: $background-color;
-          &.reset {
-            background-color: $secondary-text-color;
-            color: $background-color;
-          }
-        }
+    }
+    .action-button {
+      width: 100px;
+      height: 35px;
+      border: 2px solid $action-color;
+      color: $action-color;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      user-select: none;
+      &:hover {
+        background-color: $action-color;
+        color: $background-color;
         &.reset {
-          border: 2px solid $secondary-text-color;
-          color: $secondary-text-color;
+          background-color: $secondary-text-color;
+          color: $background-color;
         }
+      }
+      &.reset {
+        border: 2px solid $secondary-text-color;
+        color: $secondary-text-color;
       }
     }
     .files-table {
@@ -126,7 +121,7 @@ $action-colour: #2f94fd;
                 }
                 &.uploading {
                   background-color: scale-color($background-color, $lightness: -10%);
-                  color: $action-colour;
+                  color: $action-color;
                 }
                 &.waiting {
                   background-color: scale-color($background-color, $lightness: -10%);
@@ -158,10 +153,10 @@ $action-colour: #2f94fd;
           .success-file {
             cursor: default;
             .circle {
-              color: $action-colour;
+              color: $action-color;
             }
             svg {
-              color: darken($action-colour, 15%);
+              color: darken($action-color, 15%);
             }
           }
           .restart-file {
@@ -192,7 +187,7 @@ $action-colour: #2f94fd;
         .progress-file {
           grid-column: 1/-1;
           width: 100%;
-          background-color: $action-colour;
+          background-color: $action-color;
           transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
         }
         .file-errors {
@@ -205,6 +200,17 @@ $action-colour: #2f94fd;
     }
     &.drag-over {
       opacity: 0.5;
+    }
+
+    &.avatar-mode {
+      background: none;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        .actions-container {
+          height: 60px !important;
+        }
+      }
     }
   }
 

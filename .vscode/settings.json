@@ -1,4 +1,7 @@
 {
   "prettier.configPath": ".prettierrc.json",
-  "cSpell.words": ["dropzone"]
+  "cSpell.words": [
+    "Cropperjs",
+    "dropzone"
+  ]
 }

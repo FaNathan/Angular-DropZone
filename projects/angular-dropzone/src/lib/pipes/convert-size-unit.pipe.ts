@@ -1,4 +1,4 @@
-import { QueuedFile } from './../models/file.model';
+import { DropZoneFile } from './../models/file.model';
 import { FileSizeTypes, SizeUnits } from './../models/constants';
 import { Pipe, PipeTransform } from '@angular/core';
 
@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConvertSizeUnitPipe implements PipeTransform {
 
-  transform(item: QueuedFile, unit: FileSizeTypes): string {
+  transform(item: DropZoneFile, unit: FileSizeTypes): string {
     let fractionSize = 0;
     switch (unit) {
       case "KB":

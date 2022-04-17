@@ -1,11 +1,21 @@
 import { HttpHeaders, HttpParams } from "@angular/common/http";
 import { FileStatus } from "./constants";
 
-export class QueuedFile {
+export class DropZoneFile {
   file: File;
   status: FileStatus;
   error: string[];
-  loaded: number; // amount of uploaded bytes
+  progress: number;
+  private _loaded = 0;
+
+  public set loaded(v: number) {
+    this.progress = +((v * 100) / (this.file.size || 1)).toPrecision(2);
+    this._loaded = v;
+  }
+
+  public get loaded(): number {
+    return this._loaded;
+  }
 
   constructor(file: File);
   constructor(file: File, status?: FileStatus, error?: number) {
@@ -15,6 +25,7 @@ export class QueuedFile {
       this.status = FileStatus.Ready;
       this.error = [];
       this.loaded = 0;
+      this.progress = 0;
     }
 
   }
@@ -47,7 +58,14 @@ export interface ChunkInfo {
 }
 
 export interface ValidatorFunction {
-  fn: (file: QueuedFile) => boolean;
+  fn: (file: DropZoneFile) => boolean;
   errorMessage: string;
+}
+
+export interface AvatarCropper {
+  width: number;
+  height: number;
+  round: boolean;
+  srcImage?: any;
 }
 

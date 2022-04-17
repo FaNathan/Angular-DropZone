@@ -1,22 +1,25 @@
+
+
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { take, tap, map, interval, throwError, of } from 'rxjs';
-import { dumpFiles_6 } from '../models/dumpData';
-import { AngularDropzoneAPI } from "../models/file.model";
-import { ConvertSizeUnitPipe } from "../pipes/convert-size-unit.pipe";
-import { AngularDropzoneService } from '../services/angular-dropzone.service';
-import { AngularDropzoneComponent } from "./angular-dropzone.component";
+
 import { MockBuilder, MockInstance, MockProvider, MockReset, MockService } from 'ng-mocks';
-import { defaultConcurrentUploadLimit, FileStatus } from '../models/constants';
 import { By } from '@angular/platform-browser';
+import { DropzoneAdvancedComponent } from './dropzone-advanced.component';
+import { FileStatus, defaultConcurrentUploadLimit } from '../../models/constants';
+import { dumpFiles_6 } from '../../models/dumpData';
+import { AngularDropzoneAPI } from '../../models/file.model';
+import { ConvertSizeUnitPipe } from '../../pipes/convert-size-unit.pipe';
+import { AngularDropzoneService } from '../../services/angular-dropzone.service';
 
 /*
   On HTTP Error => keep the file in list
   On Validation Error => decide based on keepInvalidFiles
   On Max File Count Error => ditto
 */
-describe('AngularDropzoneComponent', () => {
-  let component: AngularDropzoneComponent;
-  let fixture: ComponentFixture<AngularDropzoneComponent>;
+describe('AngularDropzoneAdvancedComponent', () => {
+  let component: DropzoneAdvancedComponent;
+  let fixture: ComponentFixture<DropzoneAdvancedComponent>;
   let dumpFiles: Readonly<FileList>;
   let uploadService = MockProvider<AngularDropzoneService>(AngularDropzoneService, {
     uploadMedia:
@@ -40,10 +43,10 @@ describe('AngularDropzoneComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AngularDropzoneComponent, ConvertSizeUnitPipe],
+      declarations: [DropzoneAdvancedComponent, ConvertSizeUnitPipe],
       providers: [uploadService]
     }).compileComponents();
-    fixture = TestBed.createComponent(AngularDropzoneComponent);
+    fixture = TestBed.createComponent(DropzoneAdvancedComponent);
     component = fixture.componentInstance;
     component.uploadAPI = new AngularDropzoneAPI('localhost', 'POST');
     window.HTMLElement.prototype.scrollIntoView = () => { };
@@ -393,25 +396,25 @@ describe('AngularDropzoneComponent', () => {
 
 
 
-  // function runIts() {
+  //   // function runIts() {
 
 
 
-  // it(`shouldn't start upload if autoUpload is False`, () => {
-  //   // component.maxFileLimit = 1;
-  //   dropZoneServiceMock.uploadMedia.calls.reset();
-  //   component.autoUpload = false;
-  //   component.onBrowseFiles({ target: { files: dumpFiles } } as unknown as Event);
-  //   expect(dropZoneServiceMock.uploadMedia).toHaveBeenCalledTimes(0);
+  //   // it(`shouldn't start upload if autoUpload is False`, () => {
+  //   //   // component.maxFileLimit = 1;
+  //   //   dropZoneServiceMock.uploadMedia.calls.reset();
+  //   //   component.autoUpload = false;
+  //   //   component.onBrowseFiles({ target: { files: dumpFiles } } as unknown as Event);
+  //   //   expect(dropZoneServiceMock.uploadMedia).toHaveBeenCalledTimes(0);
 
-  // })
+  //   // })
 
-  // it('wip write test for chunk upload', () => {
+  //   // it('wip write test for chunk upload', () => {
 
-  // })
-  // it('remove errors after restart', () => {
+  //   // })
+  //   // it('remove errors after restart', () => {
 
-  // })
+  //   // })
 
 
 

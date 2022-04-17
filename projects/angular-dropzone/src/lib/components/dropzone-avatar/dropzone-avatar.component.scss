@@ -1,0 +1,191 @@
+@import '../variables.scss';
+
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .dropzone-container {
+    color: $secondary-text-color;
+    display: grid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-out;
+    height: 100%;
+    width: 100%;
+    background: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      .actions-container {
+        height: 90px !important;
+
+        &.uploading,
+        &.upload-error {
+          height: 100% !important;
+        }
+      }
+    }
+
+    &.drag-over {
+      opacity: 0.5;
+    }
+
+    .avatar-uploader-container {
+      border: 2px solid #575e65ba;
+      color: #575e65ba;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+
+      .uploaded-image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        .valid-image {
+          overflow: hidden;
+          object-fit: cover;
+        }
+
+        .valid-svg {
+          width: 100%;
+          height: 100%;
+          stroke-width: 0.3;
+
+          circle {
+            stroke-width: 0.3;
+          }
+        }
+      }
+    }
+
+    .actions-container {
+      background-color: #000000ba;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      display: flex;
+      align-items: center;
+      transition: height 0.3s ease-in-out;
+      justify-content: center;
+      overflow: hidden;
+      flex-direction: column;
+      color: white;
+
+      &.upload-error {
+        background-color: $error-color;
+        height: 100%;
+      }
+
+      &.uploading {
+        height: 100%;
+        background-color: #000000ba;
+
+        .upload-in-progress {
+          background-color: $action-color;
+          position: absolute;
+          height: 100%;
+          width: 0;
+          top: 0;
+          left: 0;
+          opacity: 0.5;
+          z-index: 1;
+          transition: width 0.3s ease-in-out;
+        }
+
+        .upload-in-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+      }
+
+      >svg {
+        cursor: pointer;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.small-container {
+        .action-button {
+          .title {
+            display: none;
+          }
+        }
+      }
+
+      .action-button {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .error-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        .error-title{
+          margin-top: 30px;
+          line-height: 10px;
+        }
+        &:focus,
+        &:hover {
+          .error-messages {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .error-messages {
+          background-color: #000000ba;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          font-size: 12px;
+          z-index: 3;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          padding: 10px 20px;
+          box-sizing: border-box;
+        }
+      }
+
+      .panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        justify-content: center;
+        height: 90px;
+      }
+    }
+  }
+}

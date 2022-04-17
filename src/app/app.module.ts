@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { FakeUploaderService } from './services/fake-uploader.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AngularDropzoneModule, FormsModule, MatSlideToggleModule, BrowserAnimationsModule, ReactiveFormsModule, MatInputModule, MatSelectModule, MatButtonModule, MatRadioModule],
+  imports: [BrowserModule, AngularDropzoneModule, FormsModule, MatSlideToggleModule, BrowserAnimationsModule, ReactiveFormsModule, MatInputModule, MatSelectModule, MatButtonModule, MatRadioModule, MatTabsModule],
   providers: [{ provide: AngularDropzoneService, useClass: FakeUploaderService }],
   bootstrap: [AppComponent],
 })

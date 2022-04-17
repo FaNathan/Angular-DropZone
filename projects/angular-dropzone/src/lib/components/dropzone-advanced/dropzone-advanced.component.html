@@ -11,7 +11,6 @@
     />
     <ng-content></ng-content>
   </div>
-
   <div class="files-table" *ngIf="files.length > 0">
     <div class="file-row" *ngFor="let item of files; index as i">
       <div class="main-row">
@@ -85,7 +84,10 @@
       </div>
       <div
         class="progress-file"
-        [ngStyle]="{ width: (item.loaded * 100) / (item.file.size || 1) + '%', height: item.status === fileStatus.Uploading ? '10px' : 0 }"
+        [ngStyle]="{
+          width: item.progress + '%',
+          height: item.status === fileStatus.Uploading ? '10px' : 0
+        }"
         #file
       ></div>
       <ul class="file-errors" *ngIf="item.error.length > 0">
