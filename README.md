@@ -43,8 +43,10 @@
 ```html
     <dropzone-avatar [uploadAPI]="uploadApi" [avatar]="roundAvatarCropper"></dropzone-avatar>
    ```
-<img align="center" width="530" alt="image" src="https://user-images.githubusercontent.com/102797896/161385043-c975368e-75d9-42f6-b5b1-7bd93f63a4a5.png">
+   
+   ![image](https://user-images.githubusercontent.com/102886270/163710741-dd987c1a-cd57-43e7-b497-0da88b4e77c8.png)
 
+![Avatar](https://user-images.githubusercontent.com/102886270/163710876-61a07b3b-ced9-476b-a060-96e5c04b21b4.gif)
 
 ### Advanced Mode
 ```html
