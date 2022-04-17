@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error many files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -759,11 +759,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled o
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -936,11 +936,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled o
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled on Error zero file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -992,11 +992,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Canceled o
       />
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload many files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -1712,11 +1712,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Completed 
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -1902,11 +1902,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Completed 
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload one file finished 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2072,11 +2072,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Completed 
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent All files' status should be Completed on successful upload zero file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2128,11 +2128,11 @@ exports[`AngularDropzoneAdvancedComponent All files' status should be Completed 
       />
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit KB 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2318,11 +2318,11 @@ exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit KB 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit MB 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2508,11 +2508,11 @@ exports[`AngularDropzoneAdvancedComponent Unit match fileSizeUnit MB 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2698,11 +2698,11 @@ exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 2`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -2868,11 +2868,11 @@ exports[`AngularDropzoneAdvancedComponent Unit toggle  MB 2`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  allowed Formats 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString={[Function String]}
@@ -3625,11 +3625,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  allowed Formats 1`
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  many files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -4365,11 +4365,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  many files 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  many files- ignore invalid file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -4975,11 +4975,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  many files- ignore
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  max file size 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -5803,11 +5803,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  max file size 1`] 
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  one file - ignore invalid file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -5859,11 +5859,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  one file - ignore 
       />
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent Validate functions  one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -6049,11 +6049,11 @@ exports[`AngularDropzoneAdvancedComponent Validate functions  one file 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent add new file in the middle of another upload 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -6329,11 +6329,11 @@ exports[`AngularDropzoneAdvancedComponent add new file in the middle of another 
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent autoUpload off many files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -7065,11 +7065,11 @@ exports[`AngularDropzoneAdvancedComponent autoUpload off many files 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent autoUpload off one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -7251,11 +7251,11 @@ exports[`AngularDropzoneAdvancedComponent autoUpload off one file 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent autoUpload off zero file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -7307,11 +7307,11 @@ exports[`AngularDropzoneAdvancedComponent autoUpload off zero file 1`] = `
       />
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent cancel upload many files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -8027,11 +8027,11 @@ exports[`AngularDropzoneAdvancedComponent cancel upload many files 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent cancel upload one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -8197,11 +8197,11 @@ exports[`AngularDropzoneAdvancedComponent cancel upload one file 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -8985,11 +8985,11 @@ exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep in
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep invalid files and validation error 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -9776,11 +9776,11 @@ exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files - keep in
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -10056,11 +10056,11 @@ exports[`AngularDropzoneAdvancedComponent max file limit limit 2 files 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent resume upload one file 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -10226,11 +10226,11 @@ exports[`AngularDropzoneAdvancedComponent resume upload one file 1`] = `
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
 
 exports[`AngularDropzoneAdvancedComponent upload more than max concurrent file 6 files 1`] = `
-<lib-dropzone-advanced
+<dropzone-advanced
   __ngContext__={[Function LRootView]}
   allowedFormats={[Function Array]}
   allowedFormatsString=""
@@ -10946,5 +10946,5 @@ exports[`AngularDropzoneAdvancedComponent upload more than max concurrent file 6
       </div>
     </div>
   </div>
-</lib-dropzone-advanced>
+</dropzone-advanced>
 `;
