@@ -221,6 +221,7 @@ export class AngularDropzoneBase implements OnInit {
                     }
                     break;
                   case HttpEventType.Response:
+                    this.files[index].apiResponse = res.body;
                     if (this.files[index].loaded < this.files[index].file.size) {
                       this.upload(index)
                     }
@@ -274,6 +275,7 @@ export class AngularDropzoneBase implements OnInit {
                   break;
                 case HttpEventType.Response:
                   this.files[index].status = FileStatus.Completed;
+                  this.files[index].apiResponse = res.body;
                   this.files[index].loaded = this.files[index].file.size;
                   break;
                 default:
