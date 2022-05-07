@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
   };
   @ViewChild(AngularDropzoneBase) dropzone!: ElementRef<AngularDropzoneBase>;
 
-  uploadApi = new AngularDropzoneAPI('http://localhost:5000/FileUpload/UploadLargeFile', 'POST');
+  uploadApi = new AngularDropzoneAPI('http://localhost:5000/FileUpload/UploadLargeFile', 'POST', undefined, undefined, "json");
 
   constructor(private fb: FormBuilder, private cdRef: ChangeDetectorRef) { }
   ngOnInit(): void {
